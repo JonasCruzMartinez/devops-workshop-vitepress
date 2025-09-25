@@ -1,10 +1,10 @@
 # Hands-On: Test & Release (20 Min)
 
-Add tests (quality gates) and release (version snapshot). Builds on prior.
+Add tests (quality gates) and release (version snapshot). Builds on prior. Reflection: From Code/Build, we have an artifact—now test validates it; release versions for milestones.
 
 ## Step 1: Test Phase (10 min)
 Validate content with Jest.
-1. Branch: `git checkout -b feat-test`.
+1. Branch: `git checkout -b feat-test`. Why? Isolates testing from prior changes.
 2. Create/update `tests/site.test.js` (Jest validates docs/):
    ```javascript
    const fs = require('fs');
@@ -26,6 +26,7 @@ Validate content with Jest.
      });
    });
    ```
+   Why tests? Ensures artifact (built files) matches source—no breaks from compilation.
 3. Add `jest.config.js`: 
    ```javascript
    module.exports = {
@@ -34,15 +35,16 @@ Validate content with Jest.
      coverageThreshold: { global: { branches: 80, functions: 80, lines: 80 } }
    };
    ```
-4. Local: `pnpm test` (Expected: 2 passed, coverage report).
+   Why config? Sets rules (e.g., 80% coverage) for quality (Measurement).
+4. Local: `pnpm test` (Expected: 2 passed, coverage report). Why local? Quick feedback before CI.
 5. Commit/Push/PR/Merge: `git add . && git commit -m "feat: add content tests" && ...`.
-**Expected**: Actions > Test job green (runs after build). **Verify**: Coverage >80%; fail by shortening a page → Fix.
+**Expected**: Actions > Test job green (runs after build). **Verify**: Coverage >80%; fail by shortening a page → Fix. Reflection: Tested artifact—ensures it's reliable; next, release versions it (e.g., ZIP for sharing).
 
-**Simulation**: Edit theory.md poorly → Test fails in PR → Correct.
+**Simulation**: Edit theory.md poorly → Test fails in PR → Correct. Why? Mimics real bugs in artifact.
 
 ## Step 2: Release Phase (10 min)
 Create tagged snapshot.
-1. Branch: `git checkout -b feat-release` (from main).
+1. Branch: `git checkout -b feat-release` (from main). Why from main? Builds on merged code.
 2. Update YAML (add release job after test; if: startsWith(github.ref, 'refs/tags/v')):
    ```yaml
    release:
@@ -57,6 +59,7 @@ Create tagged snapshot.
        - run: pnpm build
        - run: chmod +x scripts/release.sh && ./scripts/release.sh ${{ github.ref_name }}
    ```
+   Why conditional? Triggers only on tags (milestones), not every push.
 3. Create `scripts/release.sh`:
    ```bash
    #!/bin/bash
@@ -70,9 +73,9 @@ Create tagged snapshot.
    if [ $? -ne 0 ]; then echo "Release failed"; exit 1; fi
    echo "Release v$VERSION created!"
    ```
-   `chmod +x scripts/release.sh`.
+   `chmod +x scripts/release.sh`. Why ZIP/changelog? Packages artifact with change history for audits (Sharing).
 4. Commit/Push/PR/Merge.
-5. Tag: `git tag v1.0.0 && git push origin v1.0.0`.
-**Expected**: Releases tab > v1.0.0 with ZIP (download/unzip → site works). **Verify**: Notes show commits; no deploy conflict (release = snapshot).
+5. Tag: `git tag v1.0.0 && git push origin v1.0.0`. Why tag? Marks milestone—creates versioned ZIP from artifact.
+**Expected**: Releases tab > v1.0.0 with ZIP (download/unzip → site works). **Verify**: Notes show commits; no deploy conflict (release = snapshot). Reflection: Released versioned artifact—why tag vs. build? Builds are frequent; tags for stable shares; next, deploy publishes latest.
 
-Next: /hands-on/deploy.md (add deploy).
+Next: /hands-on/deploy.md (add deploy). Reflection: Test/Release: Validated/versioned artifact—now publish live.
