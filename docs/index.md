@@ -2,7 +2,7 @@
 
 Welcome to the DevOps Workshop site.
 
-This interactive VitePress site is your workshop guide! Fork the repo, implement CI/CD, and deploy to GitHub Pages. Edit pages here to practice "Code" phase—merge and see live updates at `https://{{username}}.github.io/devops-workshop-vitepress/`.
+This interactive VitePress site is your workshop guide! Fork the repo, implement CI/CD, and deploy to GitHub Pages. Edit pages here to practice "Code" phase—merge and see live updates at `https://undead2146.github.io/devops-workshop-vitepress/`.
 
 ## Quick Start Guide
 
