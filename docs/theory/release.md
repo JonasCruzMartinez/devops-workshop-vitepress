@@ -1,7 +1,7 @@
 # Release Phase Theory
 
 ## What is the Release Phase?
-Release creates versioned snapshots/artifacts. For VitePress: Orthogonal to deploy—tag for milestones (e.g., ZIP of dist/ for sharing), while CD keeps site live.
+Release creates versioned snapshots/artifacts. For VitePress: Orthogonal to deploy—tag for milestones (e.g., ZIP of dist/ for sharing), while CD keeps site live. In DevOps, promotes Lean (milestones without halting flow) and Sharing (artifacts for audits); GitHub Actions automates on tags.
 
 ## Key Concepts
 - **Semantic Versioning (SemVer)**: MAJOR.MINOR.PATCH (e.g., 1.0.0). MAJOR: Breaks; MINOR: Features; PATCH: Fixes.

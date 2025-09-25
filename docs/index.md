@@ -1,14 +1,14 @@
 # Welcome to Your DevOps Workshop Site
 
-This interactive VitePress site guides you through CI/CD with GitHub Actions. Fork the repo, edit pages (Code phase), and automate build/test/release/deploy. Your changes trigger the pipeline—see live updates on GitHub Pages (e.g., https://{{username}}.github.io/devops-workshop-vitepress/).
+This interactive VitePress site guides you through DevOps principles (CALMS: Culture, Automation, Lean, Measurement, Sharing) with a focus on CI/CD using GitHub Actions. Fork the repo, edit pages (Code phase), and automate build/test/release/deploy. Your changes trigger the pipeline—see live updates on GitHub Pages (e.g., https://{{username}}.github.io/devops-workshop-vitepress/).
 
 ## DevOps Overview
-DevOps accelerates delivery via automation (CALMS: Culture, Automation, Lean, Measurement, Sharing). Phases:
-- **Code**: Collaborate via Git/PRs.
-- **Build**: Generate artifacts (e.g., pnpm build).
-- **Test**: Validate with Jest.
-- **Release**: Version snapshots (e.g., tagged ZIPs).
-- **Deploy**: Publish to Pages.
+DevOps accelerates delivery holistically: Culture fosters collaboration (e.g., PRs); Automation streamlines via GitHub Actions; Lean optimizes processes; Measurement tracks metrics (e.g., coverage); Sharing promotes knowledge (e.g., feedback). Core phases (automated with Actions):
+- **Code**: Collaborate via Git/PRs (Culture/Sharing).
+- **Build**: Generate artifacts (e.g., pnpm build; Automation).
+- **Test**: Validate with Jest (Measurement).
+- **Release**: Version snapshots (e.g., tagged ZIPs; Lean).
+- **Deploy**: Publish to Pages (Automation).
 
 Follow the sidebar: Theory explains, Hands-On implements.
 

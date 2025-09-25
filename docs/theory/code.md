@@ -1,7 +1,7 @@
 # Code Phase Theory
 
 ## What is the Code Phase?
-In DevOps (CALMS framework), Code is the collaborative creation/versioning of artifacts. Foundation of the pipeline: Write/review/merge safely. Here, "code" = Markdown (docs/) + configs/scripts—your edits trigger CI/CD, simulating real projects. Goal: Prevent "it works on my machine" via version control.
+In DevOps (CALMS framework), Code is the collaborative creation/versioning of artifacts. Foundation of the pipeline: Write/review/merge safely. Here, "code" = Markdown (docs/) + configs/scripts—your edits trigger CI/CD, simulating real projects. Goal: Prevent "it works on my machine" via version control. Ties to Culture (team PRs) and Sharing (knowledge via reviews); GitHub Actions automates PR checks.
 
 ## Key Concepts & Best Practices
 - **Git Workflow**: Fork repo → Feature branch (`git checkout -b feat-add-notes`) → Atomic commits ("feat: update tracker" per SemVer) → PR for review/merge to main. Enforces collaboration.

@@ -1,7 +1,7 @@
 # Test Phase Theory
 
 ## What is the Test Phase?
-Testing ensures quality/functionality; prevents regressions in CI/CD. Automated tests run per commit—failures block deploys.
+Testing ensures quality/functionality; prevents regressions in CI/CD. Automated tests run per commit—failures block deploys. In DevOps, enables Measurement (coverage metrics) and Lean (early bug detection); GitHub Actions runs Jest on PRs/pushes.
 
 ## Key Concepts
 - **Types**: Unit (Jest: Individual checks, e.g., page content); Integration (Build + validate dist/ links); E2E (User flows, e.g., Playwright for site nav).

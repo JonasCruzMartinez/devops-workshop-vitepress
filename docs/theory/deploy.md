@@ -1,7 +1,7 @@
 # Deploy Phase Theory
 
 ## What is the Deploy Phase?
-Deployment publishes artifacts to production. For VitePress: Push dist/ to gh-pages branch → Live on GitHub Pages (https://username.github.io/repo/).
+Deployment publishes artifacts to production. For VitePress: Push dist/ to gh-pages branch → Live on GitHub Pages (https://username.github.io/repo/). In DevOps, embodies Automation (zero-touch via Actions) and Measurement (deploy success rates); integrates with sharing via live previews.
 
 ## Key Concepts
 - **Continuous Deployment (CD)**: Auto after tests (trigger: main merge).
