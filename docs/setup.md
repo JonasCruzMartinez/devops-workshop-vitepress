@@ -1,20 +1,29 @@
 # Setup Instructions
 
-## Prerequisites (Check Before Starting)
-- GitHub account (free; enable 2FA for security).
-- Node.js v18+ (download from nodejs.org; verify: `node -v`).
-- pnpm: `npm install -g pnpm` (faster than npm; verify: `pnpm -v`).
-- Git: Installed and configured (`git config --global user.name "Your Name"`).
-- Editor: VS Code recommended (extensions: GitHub Pull Requests, Actions, Markdown Preview).
-- Browser: For site preview and GitHub UI.
+Verify prerequisites, then fork/clone. Time: 10 min. Stuck? See /troubleshooting.md.
 
-## Fork, Clone, and Local Setup
-1. Fork the repo (main branch) on GitHub—name it `devops-workshop-vitepress`.
-2. Clone your fork: `git clone https://github.com/{{username}}/devops-workshop-vitepress.git`.
-3. Navigate: `cd devops-workshop-vitepress`.
-4. Install deps: `pnpm install` (creates node_modules/, pnpm-lock.yaml).
-5. Local dev server: `pnpm dev` – Site at http://localhost:5173. Edit any .md and see auto-reload.
-6. GitHub Pages: In your fork's Settings > Pages, select "Deploy from a branch" > `gh-pages` > Save. (Actions will populate it.)
+## Prerequisites
+- GitHub account (free; 2FA recommended).
+- Node.js v18+ (`node -v` → ≥18.0.0; download from nodejs.org).
+- pnpm (`npm install -g pnpm`; `pnpm -v` → ≥8.0.0; faster than npm).
+- Git (`git --version`; configure: `git config --global user.name "Your Name" && git config --global user.email "your@email.com"`).
+- VS Code (extensions: GitHub Pull Requests and Review, GitHub Actions, Markdown All in One).
+- Browser (Chrome/Firefox for Pages preview).
+
+## Fork, Clone, Install
+1. Fork repo (main branch) → Name: `devops-workshop-vitepress`.
+2. Clone: `git clone https://github.com/{{username}}/devops-workshop-vitepress.git` (Expected: Clones ~5MB).
+3. `cd devops-workshop-vitepress`.
+4. `pnpm install` (Expected: Installs vitepress/jest/mermaid; creates node_modules/, pnpm-lock.yaml).
+5. `pnpm dev` (Expected: "VitePress dev server running at http://localhost:5173"; open—see homepage).
+6. GitHub Pages: Settings > Pages > Source: Deploy from `gh-pages` > Save (Actions will create branch).
+
+## Verification
+- Site loads? Edit index.md (add note) → Save → Auto-reload shows change.
+- Issues? `pnpm build` (Expected: Generates .vitepress/dist/ with HTML/JS/CSS).
+- Next: /agenda.md for schedule; /progress.md to track.
+
+**Virtual Tip**: Share screen for clone; pair if stuck.
 
 ## Common Setup Issues
 - pnpm not found: Reinstall globally.

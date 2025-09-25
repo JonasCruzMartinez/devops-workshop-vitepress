@@ -1,27 +1,27 @@
 # Build Phase Theory
 
 ## What is the Build Phase?
-The build phase compiles source code into deployable artifacts. For VitePress, this means generating the static site from Markdown.
+Build transforms source into deployable artifacts. For VitePress: `pnpm build` generates static site (.vitepress/dist/: HTML/CSS/JS from Markdown). Automates compilation—key for reproducibility.
 
 ## Key Concepts
-- pnpm caching to speed up installs.
-- Build artifacts for deployment.
+- **pnpm Advantages**: Parallel installs, symlinks (3x faster than npm); lockfile ensures consistency (`--frozen-lockfile` in CI).
+- **Artifacts**: dist/ bundle; upload for inspection/download (e.g., verify offline).
+- **VitePress Specifics**: Bundles assets, optimizes (chunking); pitfalls: Missing deps (check pnpm-lock.yaml), large files (Vite config: build.rollupOptions).
 
 ```mermaid
-graph TD;
-    A[Source Code] --> B[Build];
-    B --> C[Artifact];
-    C --> D[Test];
+graph TD
+  A[Source Code e.g., docs/] --> B[pnpm install --frozen-lockfile]
+  B --> C[pnpm build VitePress]
+  C --> D[Artifact: .vitepress/dist/ HTML/JS/CSS]
+  D --> E[Test/Deploy]
 ```
 
-## Detailed Explanation
-The build phase is where your source code is transformed into a deployable format. In traditional software, this might involve compiling languages like Java or C++, but for web projects like VitePress, it's about bundling assets, optimizing images, and generating HTML from Markdown.
+## Benefits & Maturity
+Catches compile errors early; metrics: Build time <2 min. Level 2: Scripted builds; Level 3: Cached deps.
 
-### pnpm Benefits
-- **Speed**: Parallel downloads and symlinks reduce install time by up to 3x compared to npm.
-- **Disk Efficiency**: Shared packages across projects.
-- **Lockfile**: Ensures reproducible builds with `pnpm install --frozen-lockfile`.
+**Pitfalls**: Invalid config.js → Fail; fix locally first.
 
+Hands-On: /hands-on/code-build.md – Add build job to YAML!
 ### Artifacts
 - For VitePress: `.vitepress/dist/` contains static files (HTML, CSS, JS).
 - Uploaded as artifacts in CI for inspection or manual download.

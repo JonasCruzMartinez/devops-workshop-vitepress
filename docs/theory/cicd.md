@@ -1,37 +1,28 @@
 # CI/CD Overview Theory
 
 ## What is CI/CD?
-Continuous Integration and Continuous Deployment automate the software delivery pipeline.
+Continuous Integration (CI) + Continuous Deployment (CD) automate delivery. CI: Merge/test frequently. CD: Deploy after pass. Backbone of DevOps—fast, reliable releases.
 
 ## Key Concepts
-- Automation benefits.
-- Pipeline as code.
+- **Automation Benefits**: Fewer bugs, faster feedback (DORA: Elite teams deploy 208x more).
+- **Pipeline as Code**: YAML in repo (versioned, auditable).
+- **Tools**: GitHub Actions (workflows); Jenkins alternative.
 
 ```mermaid
-graph TD;
-    A[Code] --> B[CI];
-    B --> C[CD];
-    C --> D[Deploy];
+graph TD
+  A[Code Push/PR] --> B[CI: Build/Test]
+  B --> C{Pass?}
+  C -->|Yes| D[CD: Release/Deploy]
+  C -->|No| E[Fix & Retry]
+  D --> F[Live Site/Release]
 ```
 
-## Detailed Explanation
-CI/CD is the backbone of DevOps, enabling fast, reliable releases. CI merges and tests code frequently; CD deploys automatically.
+## Detailed Phases
+- CI: Daily merges; run on push/PR (our YAML).
+- CD: Auto-deploy to Pages on main; release on tags.
+- For VitePress: Full cycle: Edit → Build → Test → Deploy live + Release ZIP.
 
-### Continuous Integration (CI)
-- Merge code often (daily).
-- Run tests/builds on every push/PR.
-- Tools: GitHub Actions, Jenkins.
+## Maturity Model
+Level 1: Manual. Level 5: Elite (multiple deploys/day). Workshop: Reach Level 3 (automated pipeline).
 
-### Continuous Deployment (CD)
-- Auto-deploy to production after tests pass.
-- Benefits: Faster feedback, fewer bugs.
-- For VitePress: Deploy on main merges.
-
-### Pipeline as Code
-- YAML files define steps.
-- Versioned with repo.
-- Example: Our .github/workflows/ci-cd.yml.
-
-**Maturity**: From manual (Level 1) to elite (Level 5: multiple deploys/day).
-
-**Hands-On**: The entire workshop builds this pipeline.
+Hands-On: Entire workshop builds this—start with /hands-on/code-build.md!

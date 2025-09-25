@@ -1,37 +1,23 @@
 # Release Phase Theory
 
 ## What is the Release Phase?
-Releasing creates versioned snapshots of the application. In VitePress, this is orthogonal to deployment.
+Release creates versioned snapshots/artifacts. For VitePress: Orthogonal to deploy—tag for milestones (e.g., ZIP of dist/ for sharing), while CD keeps site live.
 
 ## Key Concepts
-- Semantic versioning.
-- Artifacts like ZIP files.
+- **Semantic Versioning (SemVer)**: MAJOR.MINOR.PATCH (e.g., 1.0.0). MAJOR: Breaks; MINOR: Features; PATCH: Fixes.
+- **Artifacts**: ZIP dist/ + changelog; upload to GitHub Releases.
+- **Triggers**: Manual (`git tag v1.0.0; git push --tags`); Auto (semantic-release).
+- **VitePress Nuance**: Release = Snapshot (offline/audit); Deploy = Live (Pages). No pause: Deploy every merge, release on tags.
 
 ```mermaid
-graph TD;
-    A[Build] --> B[Release];
-    B --> C[Versioned Artifact];
+graph TD
+  A[Build Artifact] --> B[Tag e.g., v1.0.0]
+  B --> C[Run release.sh: ZIP + Changelog]
+  C --> D[GitHub Release: Downloadable Asset]
+  D --> E[Share/Audit; Continue Deploys]
 ```
 
-## Detailed Explanation
-Release is about creating milestones, separate from continuous deployment. For VitePress, a release packages the static site into a ZIP for sharing or archival.
+## Pros/Cons & Maturity
+Pros: Offline access, rollbacks. Cons: Manual (automate for Level 5). Workshop: Tag post-test.
 
-### Semantic Versioning (SemVer)
-- Format: MAJOR.MINOR.PATCH (e.g., 1.0.0).
-- MAJOR: Breaking changes.
-- MINOR: New features.
-- PATCH: Bug fixes.
-
-### Triggers
-- Manual tags: `git tag v1.0.0 && git push --tags`.
-- Automated: Tools like semantic-release.
-
-### Artifacts
-- ZIP of dist/ with changelog.
-- Uploaded to GitHub Releases.
-- Pros: Offline access, audits.
-- Cons: Not live; use for demos or rollbacks.
-
-**V2 Nuance**: Releases don't pause deploys—deploy every change, release on milestones.
-
-**Hands-On**: In /hands-on/test-release.md, you'll tag and create a release.
+Hands-On: /hands-on/test-release.md – Create v1.0.0!

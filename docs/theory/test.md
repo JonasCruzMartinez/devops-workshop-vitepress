@@ -1,27 +1,27 @@
 # Test Phase Theory
 
 ## What is the Test Phase?
-Testing validates code quality and functionality. In CI/CD, automated tests prevent regressions.
+Testing ensures quality/functionality; prevents regressions in CI/CD. Automated tests run per commit—failures block deploys.
 
 ## Key Concepts
-- Unit tests with Jest.
-- Coverage thresholds.
+- **Types**: Unit (Jest: Individual checks, e.g., page content); Integration (Build + validate dist/ links); E2E (User flows, e.g., Playwright for site nav).
+- **Jest for VitePress**: `pnpm test` validates Markdown (e.g., required sections). Coverage: `jest --coverage` (>80% threshold in jest.config.js).
+- **Thresholds**: Fail if <80% (config: coverageThreshold).
 
 ```mermaid
-graph TD;
-    A[Code] --> B[Test];
-    B --> C[Pass/Fail];
+graph TD
+  A[Code Push/PR] --> B[Run Jest Tests]
+  B --> C[Unit: Content Validation]
+  C --> D[Integration: Build Check]
+  D --> E[Pass → Proceed / Fail → Block]
 ```
 
-## Detailed Explanation
-Testing is crucial in DevOps to ensure that changes don't break existing functionality. For our VitePress site, tests can validate that content is present and formatted correctly.
+## Benefits
+Catch bugs early; confidence in refactors. Metrics: Pass rate >95%. For site: Test for "What is?" in theory pages.
 
-### Types of Tests
-- **Unit Tests**: Test individual components, like checking if a page has required sections.
-- **Integration Tests**: Test how parts work together, e.g., build and serve the site.
-- **E2E Tests**: Simulate user interactions, but for static sites, this might involve checking links.
+**Edge**: Mock fs for CI (no real files).
 
-### Jest for VitePress
+Hands-On: /hands-on/test-release.md – Add site.test.js!
 - Run with `pnpm test`.
 - Coverage: `jest --coverage` to see how much code is tested.
 - Thresholds: Configure in jest.config.js to fail if coverage drops below 80%.

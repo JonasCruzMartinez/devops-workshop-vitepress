@@ -1,26 +1,26 @@
 # Deploy Phase Theory
 
 ## What is the Deploy Phase?
-Deployment makes the application available to users. For VitePress, this is publishing to GitHub Pages.
+Deployment publishes artifacts to production. For VitePress: Push dist/ to gh-pages branch → Live on GitHub Pages (https://username.github.io/repo/).
 
 ## Key Concepts
-- Continuous deployment.
-- Rollbacks.
+- **Continuous Deployment (CD)**: Auto after tests (trigger: main merge).
+- **GitHub Pages**: Free hosting; source = gh-pages. Action: peaceiris/actions-gh-pages.
+- **Security**: Use GITHUB_TOKEN (auto); no secrets needed for public.
+- **Rollbacks**: Revert commit or redeploy old dist/.
 
 ```mermaid
-graph TD;
-    A[Artifact] --> B[Deploy];
-    B --> C[Live Site];
+graph TD
+  A[Passed Tests] --> B[Deploy Job: npx gh-pages -d dist/]
+  B --> C[gh-pages Branch Updated]
+  C --> D[Live Site: username.github.io/repo/]
+  D --> E[Rollback: Revert Merge]
 ```
 
-## Detailed Explanation
-Deployment is the final step, pushing the built artifact to production. For static sites, this is uploading to a hosting service.
+## Benefits
+Instant updates; feedback loops. Maturity: Level 5 = Multiple deploys/day.
 
-### GitHub Pages
-- Source: gh-pages branch or .github/workflows/.
-- Action: peaceiris/actions-gh-pages pushes dist/ to gh-pages.
-- URL: https://username.github.io/repo-name/.
-
+Hands-On: /hands-on/deploy.md – Add deploy job!
 ### Continuous Deployment
 - Trigger: Merge to main.
 - Benefits: Instant updates, no manual steps.

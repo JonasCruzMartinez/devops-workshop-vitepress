@@ -1,17 +1,18 @@
 # Your Progress Tracker
 
-Log achievements here—deploy to make it permanent!
+Track here—PR to main for live updates! Reflect on DevOps maturity (Level 1: Manual → Level 4: Automated).
+
+## Phase Checklist
+- [ ] **Code**: Forked; PR merged; edits live on Pages.
+- [ ] **Build**: YAML runs; artifact downloaded/verified (open index.html).
+- [ ] **Test**: `pnpm test` passes (coverage >70%); fixed a failure.
+- [ ] **Release**: Tagged v1.0.0; ZIP asset in Releases tab (extracts to site).
+- [ ] **Deploy**: Full pipeline green; site at https://{{username}}.github.io/devops-workshop-vitepress/.
 
 ## Reflections
-- What surprised me about CI/CD?
-- Challenges overcome:
-- Next steps from /extensions.md.
+- Surprise about CI/CD? (e.g., How fast deploys are.)
+- Challenges: (e.g., Test fail—how fixed?)
+- Maturity: From ad-hoc (Level 1) to automated PR checks (Level 4)?
+- Next: Ideas from /extensions.md.
 
-## Self-Assessment Checklist
-- [ ] Forked and site previews locally.
-- [ ] Pipeline builds/tests on push.
-- [ ] Release created with artifact.
-- [ ] Deployed to Pages; site live.
-- [ ] Handled an error (e.g., test fail).
-
-Share your site URL in chat for feedback!
+Share site URL in chat for peer review!
