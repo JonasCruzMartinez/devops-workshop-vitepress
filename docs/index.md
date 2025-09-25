@@ -1,38 +1,118 @@
-# Welcome to Your DevOps Workshop Site
+---
+layout: home
 
-This interactive VitePress site guides you through DevOps principles (CALMS: Culture, Automation, Lean, Measurement, Sharing) with a focus on CI/CD using GitHub Actions. Fork the repo, edit pages (Code phase), and automate build/test/release/deploy. Your changes trigger the pipeline—see live updates on GitHub Pages (e.g., https://{{username}}.github.io/devops-workshop-vitepress/).
+hero:
+  name: "DevOps Workshop"
+  text: "Master CI/CD with GitHub Actions"
+  tagline: "Learn DevOps by building and deploying this very site!"
+  actions:
+    - theme: brand
+      text: Start Workshop
+      link: /setup
+    - theme: alt
+      text: View on GitHub
+      link: https://github.com/undead2146/devops-workshop-vitepress
 
-## DevOps Overview
-DevOps accelerates delivery holistically: Culture fosters collaboration (e.g., PRs); Automation streamlines via GitHub Actions; Lean optimizes processes; Measurement tracks metrics (e.g., coverage); Sharing promotes knowledge (e.g., feedback). Core phases (automated with Actions):
-- **Code**: Collaborate via Git/PRs (Culture/Sharing). Why? Ensures team reviews before changes go live.
-- **Build**: Generate artifacts (e.g., pnpm build; Automation). What’s an artifact? Compiled, production-ready files (like static HTML/JS from Markdown source)—why build? Source is editable but slow; artifacts are optimized for speed/security across machines.
-- **Test**: Validate with Jest (Measurement). Why? Checks artifact quality before release/deploy.
-- **Release**: Version snapshots (e.g., tagged ZIPs; Lean). Why tag? Builds create artifacts every time, but tags create versioned copies (e.g., v1.0.0 ZIP) for milestones, audits, or sharing—avoids cluttering with every minor change.
-- **Deploy**: Publish to Pages (Automation). Why? Makes artifact live for users; rollbacks use prior versions.
-
-Follow the sidebar: Theory explains (with why/how), Hands-On implements (step-by-step with recaps).
-
-## Quick Start
-1. Fork `main` branch on GitHub.
-2. Clone: `git clone https://github.com/{{username}}/devops-workshop-vitepress.git`.
-3. Install: `pnpm install`.
-4. Preview: `pnpm dev` (localhost:5173; edits auto-reload).
-5. Enable Pages: Repo Settings > Pages > Source: `gh-pages` branch.
-6. Proceed to /setup.md.
-
-## Your Progress Tracker (Edit & Deploy!)
-Update via PR—watch it live! Reflection: Track phases to see how Code leads to Build (artifact creation), then Test/Release (validation/versioning), and Deploy (live site).
-
-| Phase   | Status | Notes                          | Timestamp |
-|---------|--------|--------------------------------|-----------|
-| Code    | ⏳     | Forked; edited index.md        |           |
-| Build   | ⏳     | YAML added; artifact verified (compiled files ready)  |           |
-| Test    | ⏳     | Jest passes on content         |           |
-| Release | ⏳     | Tagged v1.0.0; ZIP downloaded (versioned artifact)  |           |
-| Deploy  | ⏳     | Site live; pipeline green      |           |
-
-**Pro Tip**: Branch for changes (`git checkout -b feat-notes`). Search site for refs.
-
+features:
+  - icon: 🔄
+    title: Complete CI/CD Pipeline
+    details: Build, test, release, and deploy automatically with GitHub Actions
+  - icon: 📚
+    title: Learn by Doing
+    details: Edit this site to practice the Code phase while learning DevOps
+  - icon: 🚀
+    title: Real-World Tools
+    details: Use professional tools like VitePress, Jest, and GitHub Pages
+  - icon: 📊
+    title: Track Progress
+    details: Monitor your learning journey with built-in progress tracking
 ---
 
-*Powered by your CI/CD pipeline—automation in action!*
+## Workshop Overview
+
+This interactive workshop teaches you DevOps through the **CALMS framework**:
+
+<div class="phase-card">
+  <div class="phase-header">
+    <span class="phase-title">🤝 Culture</span>
+    <span class="workshop-status status-pending">Collaboration</span>
+  </div>
+  <p>Learn collaborative development through Pull Requests and code reviews</p>
+</div>
+
+<div class="phase-card">
+  <div class="phase-header">
+    <span class="phase-title">🤖 Automation</span>
+    <span class="workshop-status status-pending">CI/CD</span>
+  </div>
+  <p>Automate your entire development pipeline with GitHub Actions</p>
+</div>
+
+<div class="phase-card">
+  <div class="phase-header">
+    <span class="phase-title">📈 Lean</span>
+    <span class="workshop-status status-pending">Efficiency</span>
+  </div>
+  <p>Optimize workflows for faster, more reliable deployments</p>
+</div>
+
+<div class="phase-card">
+  <div class="phase-header">
+    <span class="phase-title">📊 Measurement</span>
+    <span class="workshop-status status-pending">Metrics</span>
+  </div>
+  <p>Track performance with test coverage and deployment metrics</p>
+</div>
+
+<div class="phase-card">
+  <div class="phase-header">
+    <span class="phase-title">🔄 Sharing</span>
+    <span class="workshop-status status-pending">Knowledge</span>
+  </div>
+  <p>Share learnings through documentation and feedback loops</p>
+</div>
+
+## Your Learning Journey
+
+You'll build a complete DevOps pipeline through 5 progressive phases:
+
+<div class="timeline">
+  <div class="timeline-item">
+    <h3>Phase 1: Code</h3>
+    <p>Learn collaborative development with Git, branches, and Pull Requests</p>
+  </div>
+  <div class="timeline-item">
+    <h3>Phase 2: Build</h3>
+    <p>Transform source code into deployable artifacts using automated builds</p>
+  </div>
+  <div class="timeline-item">
+    <h3>Phase 3: Test</h3>
+    <p>Ensure quality with automated testing and coverage reporting</p>
+  </div>
+  <div class="timeline-item">
+    <h3>Phase 4: Release</h3>
+    <p>Create versioned releases with semantic versioning and changelogs</p>
+  </div>
+  <div class="timeline-item">
+    <h3>Phase 5: Deploy</h3>
+    <p>Automatically deploy to production with rollback capabilities</p>
+  </div>
+</div>
+
+## What You'll Build
+
+By the end of this workshop, you'll have:
+
+- ✅ A fully automated CI/CD pipeline
+- ✅ A live website deployed to GitHub Pages  
+- ✅ Automated testing with coverage reports
+- ✅ Versioned releases with downloadable artifacts
+- ✅ Real DevOps experience with industry tools
+
+## Ready to Start?
+
+<div class="tip-box">
+💡 <strong>Meta-Learning:</strong> This workshop site IS your DevOps project! Every edit you make practices the "Code" phase, and you'll see your changes go live through the complete pipeline.
+</div>
+
+[Get Started with Setup →](/setup)

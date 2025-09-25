@@ -2,103 +2,105 @@ import { defineConfig } from 'vitepress'
 import { withMermaid } from 'vitepress-plugin-mermaid'
 
 export default withMermaid(
-    defineConfig({
-        title: 'DevOps Workshop',
-        description: 'Interactive workshop on CI/CD with GitHub Actions and VitePress',
-        base: '/',
+  defineConfig({
+    title: 'DevOps Workshop',
+    description: 'Interactive CI/CD Workshop with GitHub Actions',
+    base: '/',
 
-        ignoreDeadLinks: true,
+    ignoreDeadLinks: true,
 
-        head: [
-            ['link', { rel: 'icon', href: '/assets/icon.png' }]
-        ],
+    head: [
+      ['link', { rel: 'icon', href: '/favicon.ico' }],
+      ['meta', { name: 'theme-color', content: '#2563eb' }]
+    ],
 
-        themeConfig: {
-            logo: './assets/logo.png',
+    themeConfig: {
+      logo: '/logo.png',
 
-            nav: [
-                { text: 'Home', link: '/' },
-                { text: 'Theory', items: [
-                    { text: 'Code Phase', link: '/theory/code' },
-                    { text: 'Build Phase', link: '/theory/build' },
-                    { text: 'Test Phase', link: '/theory/test' },
-                    { text: 'Release Phase', link: '/theory/release' },
-                    { text: 'Deploy Phase', link: '/theory/deploy' },
-                    { text: 'CI/CD Overview', link: '/theory/cicd' }
-                ]},
-                { text: 'Hands-On', items: [
-                    { text: 'Code & Build', link: '/hands-on/code-build' },
-                    { text: 'Test & Release', link: '/hands-on/test-release' },
-                    { text: 'Deploy', link: '/hands-on/deploy' }
-                ]},
-                { text: 'Resources', link: '/resources/troubleshooting' }
-            ],
-
-            sidebar: [
-                { text: 'Home', link: '/' },  // Fixed: Changed from '/index' to '/' for root home
-                { text: 'Setup', link: '/setup' },
-                { text: 'Agenda', link: '/agenda' },
-                { text: 'Progress', link: '/progress' },
-                {
-                  text: 'Theory',
-                  items: [
-                    { text: 'Code Phase', link: '/theory/code' },
-                    { text: 'Build Phase', link: '/theory/build' },
-                    { text: 'Test Phase', link: '/theory/test' },
-                    { text: 'Release Phase', link: '/theory/release' },
-                    { text: 'Deploy Phase', link: '/theory/deploy' },
-                    { text: 'CI/CD Overview', link: '/theory/cicd' }
-                  ]
-                },
-                {
-                  text: 'Hands-On',
-                  items: [
-                    { text: 'Code & Build', link: '/hands-on/code-build' },
-                    { text: 'Test & Release', link: '/hands-on/test-release' },
-                    { text: 'Deploy', link: '/hands-on/deploy' }
-                  ]
-                },
-                {
-                  text: 'Resources',
-                  items: [
-                    { text: 'Troubleshooting', link: '/resources/troubleshooting' },
-                    { text: 'Extensions', link: '/resources/extensions' },
-                    { text: 'Feedback', link: '/resources/feedback' }
-                  ]
-                }
-            ],
-
-            socialLinks: [
-                { icon: 'github', link: 'https://github.com/undead2146/devops-workshop-vitepress' }
-            ],
-
-            footer: {
-                message: 'GeneralsHub Docs',
-                copyright: '© 2025 GeneralsHub'
-            }
+      nav: [
+        { text: 'Home', link: '/' },
+        { text: 'Setup', link: '/setup' },
+        { 
+          text: 'Workshop Phases',
+          items: [
+            { text: '1. Code Phase', link: '/phases/01-code' },
+            { text: '2. Build Phase', link: '/phases/02-build' },
+            { text: '3. Test Phase', link: '/phases/03-test' },
+            { text: '4. Release Phase', link: '/phases/04-release' },
+            { text: '5. Deploy Phase', link: '/phases/05-deploy' }
+          ]
         },
+        { text: 'Resources', link: '/resources' }
+      ],
 
-        // Mermaid configuration
-        mermaid: {
-            theme: 'default',
-            themeVariables: {
-                primaryColor: '#7c3aed',
-                primaryTextColor: '#fff',
-                primaryBorderColor: '#6b46c1',
-                lineColor: '#5f5f5f',
-                secondaryColor: '#2ed573',
-                tertiaryColor: '#1e90ff'
-            }
-        },
+      sidebar: {
+        '/': [
+          {
+            text: 'Getting Started',
+            items: [
+              { text: 'Welcome', link: '/' },
+              { text: 'Setup & Prerequisites', link: '/setup' },
+              { text: 'Workshop Schedule', link: '/schedule' },
+              { text: 'Your Progress', link: '/progress' }
+            ]
+          },
+          {
+            text: 'DevOps Theory',
+            items: [
+              { text: 'DevOps Overview', link: '/theory/overview' },
+              { text: 'CI/CD Fundamentals', link: '/theory/cicd' },
+              { text: 'GitHub Actions', link: '/theory/actions' }
+            ]
+          },
+          {
+            text: 'Workshop Phases',
+            items: [
+              { text: '1. Code Phase', link: '/phases/01-code' },
+              { text: '2. Build Phase', link: '/phases/02-build' },
+              { text: '3. Test Phase', link: '/phases/03-test' },
+              { text: '4. Release Phase', link: '/phases/04-release' },
+              { text: '5. Deploy Phase', link: '/phases/05-deploy' }
+            ]
+          },
+          {
+            text: 'Resources',
+            items: [
+              { text: 'Troubleshooting', link: '/resources/troubleshooting' },
+              { text: 'Extensions', link: '/resources/extensions' },
+              { text: 'Feedback', link: '/resources/feedback' }
+            ]
+          }
+        ]
+      },
 
-        // Optional: Configure mermaid for dark mode
-        mermaidPlugin: {
-            class: 'mermaid my-class'
-        }
-    }),
+      socialLinks: [
+        { icon: 'github', link: 'https://github.com/undead2146/devops-workshop-vitepress' }
+      ],
 
-    // Mermaid configuration
-    {
-        theme: 'default'
+      footer: {
+        message: 'DevOps Workshop - Learn by Doing',
+        copyright: '© 2025 GeneralsHub'
+      },
+
+      search: {
+        provider: 'local'
+      }
+    },
+
+    markdown: {
+      lineNumbers: true,
+      container: {
+        tipLabel: '💡 Tip',
+        warningLabel: '⚠️ Warning',
+        dangerLabel: '🚨 Important',
+        infoLabel: 'ℹ️ Info',
+        detailsLabel: 'Details'
+      }
     }
+  }),
+
+  // Mermaid configuration
+  {
+    theme: 'default'
+  }
 )
