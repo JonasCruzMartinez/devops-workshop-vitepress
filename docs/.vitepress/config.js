@@ -31,11 +31,11 @@ export default withMermaid(
                     { text: 'Test & Release', link: '/hands-on/test-release' },
                     { text: 'Deploy', link: '/hands-on/deploy' }
                 ]},
-                { text: 'Resources', link: '/troubleshooting' }
+                { text: 'Resources', link: '/resources/troubleshooting' }
             ],
 
             sidebar: [
-                { text: 'Introduction', link: '/index' },
+                { text: 'Home', link: '/' },  // Fixed: Changed from '/index' to '/' for root home
                 { text: 'Setup', link: '/setup' },
                 { text: 'Agenda', link: '/agenda' },
                 { text: 'Progress', link: '/progress' },
@@ -61,9 +61,9 @@ export default withMermaid(
                 {
                   text: 'Resources',
                   items: [
-                    { text: 'Troubleshooting', link: '/troubleshooting' },
-                    { text: 'Extensions', link: '/extensions' },
-                    { text: 'Feedback', link: '/feedback' }
+                    { text: 'Troubleshooting', link: '/resources/troubleshooting' },
+                    { text: 'Extensions', link: '/resources/extensions' },
+                    { text: 'Feedback', link: '/resources/feedback' }
                   ]
                 }
             ],

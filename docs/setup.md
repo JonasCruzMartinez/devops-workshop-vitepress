@@ -1,6 +1,6 @@
 # Setup Instructions
 
-Verify prerequisites, then fork/clone. Time: 10 min. Stuck? See /troubleshooting.md. Basics: Git tracks changes (like undo history); pnpm manages packages efficiently (faster installs than npm).
+Verify prerequisites, then fork/clone. Time: 10 min. Stuck? See [/resources/troubleshooting](/resources/troubleshooting). Basics: Git tracks changes (like undo history); pnpm manages packages efficiently (faster installs than npm).
 
 ## Prerequisites
 - GitHub account (free; 2FA recommended). Why? Hosts repo for collaboration (DevOps Culture).
@@ -21,7 +21,7 @@ Verify prerequisites, then fork/clone. Time: 10 min. Stuck? See /troubleshooting
 ## Verification
 - Site loads? Edit index.md (add note) → Save → Auto-reload shows change. Reflection: You're in Code phase—edits are source; next, build transforms to artifact (compiled files).
 - Issues? `pnpm build` (Expected: Generates .vitepress/dist/ with HTML/JS/CSS). Why build? Creates artifact for production (faster, secure).
-- Next: /agenda.md for schedule; /progress.md to track. Reflection: Setup done—fork/clone enables Code; install prepares for Build (artifact creation).
+- Next: [/agenda](/agenda) for schedule; [/progress](/progress) to track. Reflection: Setup done—fork/clone enables Code; install prepares for Build (artifact creation).
 
 **Virtual Tip**: Share screen for clone; pair if stuck.
 
