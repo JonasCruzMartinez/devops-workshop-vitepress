@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+pnpm-lock.yaml  # Optional: Keep for reproducibility, but ignore for clean clones
+
+# Builds
+.vitepress/dist/
+dist/
+coverage/
+dist.zip
+
+# Logs
+*.log
+npm-debug.log*
+
+# Runtime data
+pnpm-store/
+.vite/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vs
+.vscode
+*.swp
+*.swo
+
+# VitePress cache
+docs/.vitepress/cache/
