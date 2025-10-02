@@ -10,6 +10,9 @@ hero:
       text: Start Workshop
       link: /setup
     - theme: alt
+      text: View Progress Tracker
+      link: /progress
+    - theme: alt
       text: View on GitHub
       link: https://github.com/undead2146/devops-workshop-vitepress
 
@@ -24,11 +27,16 @@ features:
     title: Real-World Tools
     details: Use professional tools like VitePress, Jest, and GitHub Pages
   - icon: 📊
-    title: Track Progress
-    details: Monitor your learning journey with built-in progress tracking
+    title: Track Your Progress
+    details: Monitor your learning journey with the built-in progress tracker
 ---
 
-## Workshop Overview
+<div class="workshop-callout">
+  <div class="workshop-callout-title">🎯 Workshop Meta-Learning Approach</div>
+  <p><strong>This workshop site IS your DevOps project!</strong> Every edit you make practices the "Code" phase, and you'll see your changes go live through the complete CI/CD pipeline you'll build.</p>
+</div>
+
+## Workshop Overview: The CALMS Framework
 
 This interactive workshop teaches you DevOps through the **CALMS framework**:
 
@@ -43,7 +51,7 @@ This interactive workshop teaches you DevOps through the **CALMS framework**:
 <div class="phase-card">
   <div class="phase-header">
     <span class="phase-title">🤖 Automation</span>
-    <span class="workshop-status status-pending">CI/CD</span>
+    <span class="workshop-status status-pending">CI/CD Pipeline</span>
   </div>
   <p>Automate your entire development pipeline with GitHub Actions</p>
 </div>
@@ -72,14 +80,14 @@ This interactive workshop teaches you DevOps through the **CALMS framework**:
   <p>Share learnings through documentation and feedback loops</p>
 </div>
 
-## Your Learning Journey
+## Your DevOps Learning Journey
 
-You'll build a complete DevOps pipeline through 5 progressive phases:
+You'll build a complete CI/CD pipeline through 5 progressive phases:
 
 <div class="timeline">
   <div class="timeline-item">
     <h3>Phase 1: Code</h3>
-    <p>Learn collaborative development with Git, branches, and Pull Requests</p>
+    <p>Learn collaborative development with Git, branches, and Pull Requests. <strong>You'll start by editing your progress tracker!</strong></p>
   </div>
   <div class="timeline-item">
     <h3>Phase 2: Build</h3>
@@ -99,20 +107,45 @@ You'll build a complete DevOps pipeline through 5 progressive phases:
   </div>
 </div>
 
+## Workshop Progress Tracking
+
+<div class="progress-tracker">
+  <h3>🎯 Your Personal Progress Tracker</h3>
+  <p>Throughout this workshop, you'll be editing and updating your personal progress tracker to practice the Code phase of DevOps.</p>
+  
+  <div class="tip-box">
+    💡 <strong>First Step:</strong> After setup, you'll personalize your <a href="/progress">Progress Tracker</a> by adding your name, goals, and tracking your completion of each phase. This editing process teaches Git workflows!
+  </div>
+</div>
+
 ## What You'll Build
 
 By the end of this workshop, you'll have:
 
-- ✅ A fully automated CI/CD pipeline
-- ✅ A live website deployed to GitHub Pages  
-- ✅ Automated testing with coverage reports
-- ✅ Versioned releases with downloadable artifacts
-- ✅ Real DevOps experience with industry tools
+- ✅ **A fully automated CI/CD pipeline** running on GitHub Actions
+- ✅ **A live website** deployed to GitHub Pages (this very site, with your customizations!)
+- ✅ **Automated testing** with coverage reports ensuring quality
+- ✅ **Versioned releases** with downloadable artifacts for distribution
+- ✅ **Real DevOps experience** with professional industry tools
+- ✅ **A personalized progress tracker** documenting your DevOps journey
 
-## Ready to Start?
+## Ready to Transform Your Development Workflow?
 
-<div class="tip-box">
-💡 <strong>Meta-Learning:</strong> This workshop site IS your DevOps project! Every edit you make practices the "Code" phase, and you'll see your changes go live through the complete pipeline.
+<div class="success-box">
+🚀 <strong>Let's Get Started!</strong> This workshop will transform how you think about software delivery. You'll experience the power of automation, collaboration, and continuous improvement firsthand.
 </div>
 
-[Get Started with Setup →](/setup)
+### Next Steps:
+
+1. **[Complete Setup](/setup)** - Get your development environment ready (10 minutes)
+2. **[View Schedule](/schedule)** - See the detailed 2-hour workshop timeline  
+3. **[Start Phase 1: Code](/phases/01-code)** - Begin your DevOps journey by editing your progress tracker!
+
+<div class="workshop-callout">
+  <div class="workshop-callout-title">🎓 Learning Approach</div>
+  <p>This workshop follows a hands-on, learning-by-doing methodology. Every concept is immediately applied to this very website, giving you tangible results and real-world experience.</p>
+</div>
+
+---
+
+*Ready to master DevOps? Your journey to automated, reliable software delivery starts now!*

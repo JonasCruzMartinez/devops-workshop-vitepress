@@ -12,17 +12,32 @@ Validate content with Jest.
 
    describe('Workshop Site', () => {
      const docsDir = path.join(__dirname, '../docs');
-     test('Theory pages have sections', () => {
-       const files = ['theory/code.md', 'theory/build.md'];  // Add more
-       files.forEach(file => {
-         const content = fs.readFileSync(path.join(docsDir, file), 'utf8');
-         expect(content).toContain('What is the');
-         expect(content.length).toBeGreaterThan(500);
+
+     // DevOps Quality Gate: Check for dead links in config.js (ensures navigation to existing docs before build/deploy)
+     test('Config.js links point to existing files (no dead links)', () => {
+       const configPath = path.join(docsDir, '.vitepress/config.js');
+       expect(fs.existsSync(configPath)).toBe(true);
+       
+       const configContent = fs.readFileSync(configPath, 'utf8');
+       
+       // Simple regex to extract unique link paths from nav and sidebar (e.g., '/theory/build')
+       const linkRegex = /link:\s*'([^']+)'/g;
+       let match;
+       const uniqueLinks = new Set();
+       
+       while ((match = linkRegex.exec(configContent)) !== null) {
+         const link = match[1];
+         if (link.startsWith('/') && !link.includes('http') && !uniqueLinks.has(link)) {
+           uniqueLinks.add(link);
+         }
+       }
+       
+       // For each link, check if corresponding .md file exists (VitePress convention)
+       uniqueLinks.forEach(link => {
+         const filePath = path.join(docsDir, link.replace(/^\//, '') + '.md');
+         // DevOps Focus: Fail fast if link broken—prevents deploy of invalid navigation (Lean: early detection)
+         expect(fs.existsSync(filePath)).toBe(true, `Dead link in config.js: ${link} (missing ${filePath})`);
        });
-     });
-     test('Index has tracker', () => {
-       const content = fs.readFileSync(path.join(docsDir, 'index.md'), 'utf8');
-       expect(content).toContain('| Phase |');
      });
    });
    ```

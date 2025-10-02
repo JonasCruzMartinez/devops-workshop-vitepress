@@ -323,3 +323,29 @@ th {
 tr:nth-child(even) {
   background: var(--vp-c-bg-soft);
 }
+
+/* Progress tracker styling */
+.progress-tracker {
+  background: var(--vp-c-bg-soft);
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.progress-tracker h3 {
+  margin-top: 0;
+  color: var(--vp-c-brand-1);
+}
+
+.workshop-callout {
+  border-left: 4px solid var(--vp-c-brand-1);
+  background: var(--vp-c-bg-soft);
+  padding: 16px 20px;
+  margin: 20px 0;
+}
+
+.workshop-callout-title {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--vp-c-brand-1);
+}

@@ -4,11 +4,13 @@
 Build transforms source into deployable artifacts. For VitePress: `pnpm build` generates static site (.vitepress/dist/: HTML/CSS/JS from Markdown). Automates compilation—key for reproducibility. In DevOps, supports Automation (pipelines) and Lean (fast builds); GitHub Actions handles caching for efficiency.
 
 ## Why Build Phase?
-Source code (e.g., Markdown) is human-readable but not optimized—Build creates artifacts (compiled outputs) for production: Faster loading, secure (no source exposure), consistent across machines. Why not skip? Raw source deploys slowly/ insecurely; artifacts enable testing/release/deploy. Analogy: Cooking ingredients (source) into a meal (artifact)—edible but not ready-to-serve without prep. Next: Test validates the artifact.
+Source code (e.g., Markdown) is human-readable but not optimized for production. The Build phase creates a deployable **artifact**—a packaged, compiled, and optimized version of your application.
+
+Think of an artifact as a ready-to-serve meal, whereas source code is just the raw ingredients. You can't serve ingredients to a customer; you must first cook and prepare them. Similarly, we build artifacts to create a consistent, fast, and secure version of our site for users. The artifact is what gets tested, versioned, and deployed.
 
 ## Key Concepts
 - **pnpm Advantages**: Parallel installs, symlinks (3x faster than npm); lockfile ensures consistency (`--frozen-lockfile` in CI). Why lockfile? Prevents version mismatches (Measurement).
-- **Artifacts**: dist/ bundle; upload for inspection/download (e.g., verify offline). Why upload? Allows review/rollback without rebuilding; in CI, shares for team (Sharing).
+- **What is an Artifact?**: An artifact is the output of the build process. For this VitePress workshop, the artifact is the `.vitepress/dist/` directory. This folder contains all the static HTML, CSS, and JavaScript files that make up your live website. It's a self-contained, portable package that can be deployed to any web server.
 - **VitePress Specifics**: Bundles assets, optimizes (chunking); pitfalls: Missing deps (check pnpm-lock.yaml), large files (Vite config: build.rollupOptions). Why optimize? Lean—reduces load times.
 
 ```mermaid

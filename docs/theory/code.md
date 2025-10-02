@@ -1,10 +1,10 @@
 # Code Phase Theory
 
 ## What is the Code Phase?
-In DevOps (CALMS framework), Code is the collaborative creation/versioning of artifacts. Foundation of the pipeline: Write/review/merge safely. Here, "code" = Markdown (docs/) + configs/scripts—your edits trigger CI/CD, simulating real projects. Goal: Prevent "it works on my machine" via version control. Ties to Culture (team PRs) and Sharing (knowledge via reviews); GitHub Actions automates PR checks.
+In DevOps (CALMS framework), Code is the collaborative creation/versioning of source code. It's the foundation of the pipeline: Write/review/merge safely. Here, "code" = Markdown (docs/) + configs/scripts—your edits trigger CI/CD, simulating real projects. Goal: Prevent "it works on my machine" via version control. Ties to Culture (team PRs) and Sharing (knowledge via reviews); GitHub Actions automates PR checks.
 
 ## Why Code Phase?
-Code ensures changes are tracked and reviewed—without it, teams risk errors from unversioned edits. Analogy: Like drafting a document collaboratively; Git (version control) saves history for easy undo/branching. In our workshop, editing Markdown (source) starts the flow; next, Build transforms it to an artifact (compiled files).
+Code ensures changes are tracked and reviewed—without it, teams risk errors from unversioned edits. Analogy: Like drafting a document collaboratively; Git (version control) saves history for easy undo/branching. In our workshop, editing Markdown (your source code) starts the flow; next, the **Build phase** transforms this source code into a deployable **artifact**.
 
 ## Key Concepts & Best Practices
 - **Git Workflow**: Fork repo → Feature branch (`git checkout -b feat-add-notes`) → Atomic commits ("feat: update tracker" per SemVer) → PR for review/merge to main. Enforces collaboration. Why fork/branch? Allows safe experimentation without breaking main (Lean).

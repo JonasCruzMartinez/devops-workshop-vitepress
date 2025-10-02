@@ -1,6 +1,6 @@
 # Hands-On: Code & Build (20 Min)
 
-Implement Code (edits/PR) and Build (YAML/artifact). Verify at each step. Reflection: Code creates source; Build transforms to artifact (compiled files)—why? Prepares for testing/release/deploy.
+Implement Code (edits/PR) and Build (YAML/artifact). Verify at each step. Reflection: Code creates source; Build transforms it into an **artifact** (the compiled, deployable website) — why? To prepare it for testing, release, and deployment.
 
 ## Step 1: Code Phase (5–7 min)
 Practice collaboration—edit site!
@@ -9,7 +9,7 @@ Practice collaboration—edit site!
 3. Lint: `pnpm lint` (if ESLint: `pnpm add -D eslint-plugin-markdown`). Why lint? Catches errors early (Measurement).
 4. Commit/Push: `git add . && git commit -m "feat: update tracker" && git push origin feat-code`. Why commit? Versions your code.
 5. PR: GitHub > Create PR to main > Merge (squash for clean history). Why PR? Reviews ensure quality (Culture).
-**Expected**: PR shows diff; merge succeeds. **Verify**: Refresh Pages—edits live? (If not, check Settings > Pages.) Reflection: Code phase done—your edits are versioned; next, Build creates artifact from them.
+**Expected**: PR shows diff; merge succeeds. **Verify**: Refresh Pages—edits live? (If not, check Settings > Pages.) Reflection: Code phase done—your edits are versioned; next, Build creates an artifact from them.
 
 **Simulation**: Add invalid Markdown → PR lint fails → Fix. Why? Teaches error catching before build.
 

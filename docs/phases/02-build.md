@@ -41,11 +41,12 @@ graph TD
 ### Key Concepts
 
 #### 1. What Are Build Artifacts?
-Build artifacts are the compiled, production-ready files generated from your source code:
-- **Source Code**: Human-readable files (Markdown, JavaScript, CSS)
-- **Build Process**: Tools like VitePress transform source into optimized files
-- **Artifacts**: The output files ready for deployment (HTML, CSS, JS bundles)
-- **Why Artifacts?**: Source code is editable but slow/insecure for production; artifacts are optimized, secure, and consistent
+A build artifact is the official, packaged output generated from your source code. It's the "thing" that you will test, release, and deploy.
+- **Source Code**: Human-readable files you edit (e.g., `docs/index.md`).
+- **Build Process**: An automated script (`pnpm build`) transforms that source code.
+- **Artifact**: The result is a self-contained, optimized package. In our case, it's the `.vitepress/dist/` directory, containing the final HTML, CSS, and JavaScript for our website.
+
+**Why Artifacts?**: Source code is for developers. Artifacts are for servers and users. They are consistent, secure (no source code exposed), and optimized for performance.
 
 #### 2. pnpm vs npm
 - **pnpm**: Faster, more efficient package manager (3x faster installs)

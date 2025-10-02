@@ -20,7 +20,18 @@ export default withMermaid(
       nav: [
         { text: 'Home', link: '/' },
         { text: 'Setup', link: '/setup' },
-        { 
+        {
+          text: 'DevOps Theory',
+          items: [
+            { text: 'CI/CD Overview', link: '/theory/cicd' },
+            { text: 'Code Phase Theory', link: '/theory/code' },
+            { text: 'Build Phase Theory', link: '/theory/build' },
+            { text: 'Test Phase Theory', link: '/theory/test' },
+            { text: 'Release Phase Theory', link: '/theory/release' },
+            { text: 'Deploy Phase Theory', link: '/theory/deploy' }
+          ]
+        },
+        {
           text: 'Workshop Phases',
           items: [
             { text: '1. Code Phase', link: '/phases/01-code' },
@@ -30,7 +41,14 @@ export default withMermaid(
             { text: '5. Deploy Phase', link: '/phases/05-deploy' }
           ]
         },
-        { text: 'Resources', link: '/resources' }
+        {
+          text: 'Resources',
+          items: [
+            { text: 'Troubleshooting', link: '/resources/troubleshooting' },
+            { text: 'Extensions', link: '/resources/extensions' },
+            { text: 'Feedback', link: '/resources/feedback' }
+          ]
+        }
       ],
 
       sidebar: {
@@ -47,9 +65,12 @@ export default withMermaid(
           {
             text: 'DevOps Theory',
             items: [
-              { text: 'DevOps Overview', link: '/theory/overview' },
-              { text: 'CI/CD Fundamentals', link: '/theory/cicd' },
-              { text: 'GitHub Actions', link: '/theory/actions' }
+              { text: 'CI/CD Overview', link: '/theory/cicd' },
+              { text: 'Code Phase Theory', link: '/theory/code' },
+              { text: 'Build Phase Theory', link: '/theory/build' },
+              { text: 'Test Phase Theory', link: '/theory/test' },
+              { text: 'Release Phase Theory', link: '/theory/release' },
+              { text: 'Deploy Phase Theory', link: '/theory/deploy' }
             ]
           },
           {
