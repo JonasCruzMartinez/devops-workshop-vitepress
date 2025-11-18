@@ -62,13 +62,33 @@ jobs:
     needs: [build, test]
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      pages: write
+      id-token: write
     concurrency:
-      group: ${{ github.workflow }}-${{ github.ref }}
+      group: "pages"
+      cancel-in-progress: false
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
-      - uses: peaceiris/actions-gh-pages@v4
+      - uses: pnpm/action-setup@v2
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .vitepress/dist
-          cname: ${{ secrets.CNAME }}
+          version: 8
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: 'pnpm'
+      - run: pnpm install
+      - run: pnpm build
+      - name: Create CNAME
+        run: echo "${{ secrets.CNAME }}" > ./.vitepress/dist/CNAME
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .vitepress/dist
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
