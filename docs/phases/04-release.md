@@ -203,4 +203,4 @@ Release management brings structure to software distribution!
 
 This dual approach enables both **continuous delivery** and **stable distribution**.
 
-[Continue to Phase 5: Deploy →](/phases/05-deploy)
+Continue to Phase 5: Deploy

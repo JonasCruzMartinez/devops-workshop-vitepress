@@ -200,10 +200,10 @@ Track your progress through each DevOps phase. **Edit this file to update your s
 
 ## Workshop Resources & Next Steps
 
-- 📚 **Extensions to Try:** [Workshop Extensions](/resources/extensions)
-- 🔧 **Need Help?** [Troubleshooting Guide](/resources/troubleshooting)  
-- 💭 **Provide Feedback:** [Workshop Feedback](/resources/feedback)
-- 📖 **Deep Dive Theory:** [CI/CD Overview](/theory/cicd)
+- 📚 **Extensions to Try:** Workshop Extensions
+- 🔧 **Need Help?** Troubleshooting Guide  
+- 💭 **Provide Feedback:** Workshop Feedback
+- 📖 **Deep Dive Theory:** CI/CD Overview
 
 <div class="workshop-callout">
   <div class="workshop-callout-title">🎓 Workshop Complete!</div>

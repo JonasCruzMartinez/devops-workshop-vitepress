@@ -15,4 +15,4 @@ Extend your pipeline/site post-workshop (1–3 hours). PR to original repo!
 - Actions: [docs.github.com/en/actions](https://docs.github.com/en/actions)
 - DevOps: "Accelerate" book; DORA metrics.
 
-Experiment—share via [/resources/feedback](/resources/feedback)!
+Experiment—share via feedback!

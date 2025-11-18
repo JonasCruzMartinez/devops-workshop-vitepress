@@ -222,9 +222,9 @@ You've experienced the complete **CALMS** framework:
   <p>Take your new DevOps skills to the next level</p>
 </div>
 
-1. **[Explore Extensions](/resources/extensions)** - Add advanced features to your pipeline
-2. **[Share Your Achievement](#)** - Add your site URL to the workshop chat
-3. **[Provide Feedback](/resources/feedback)** - Help improve this workshop for others
+1. **Explore Extensions** - Add advanced features to your pipeline
+2. **Share Your Achievement** - Add your site URL to the workshop chat
+3. **Provide Feedback** - Help improve this workshop for others
 4. **Apply to Real Projects** - Implement CI/CD in your work or personal projects
 
 <div class="workshop-callout">

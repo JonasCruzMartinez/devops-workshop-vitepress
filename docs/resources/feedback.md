@@ -14,7 +14,7 @@ Comments: (e.g., "Loved live deploys!")
 - [ ] Proficient (85%): Tests pass; release created; fixed error.
 - [ ] Advanced (100%): Full green; extension added (e.g., lint).
 
-See [/progress](/progress) checklist. What to improve?
+See progress checklist. What to improve?
 
 ## Open Notes
 - Strengths: 

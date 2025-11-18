@@ -8,10 +8,10 @@ hero:
   actions:
     - theme: brand
       text: Start Workshop
-      link: /setup
+      link: #
     - theme: alt
       text: View Progress Tracker
-      link: /progress
+      link: #
     - theme: alt
       text: View on GitHub
       link: https://github.com/undead2146/devops-workshop-vitepress
@@ -113,9 +113,8 @@ You'll build a complete CI/CD pipeline through 5 progressive phases:
   <h3>🎯 Your Personal Progress Tracker</h3>
   <p>Throughout this workshop, you'll be editing and updating your personal progress tracker to practice the Code phase of DevOps.</p>
   
-  <div class="tip-box">
-    💡 <strong>First Step:</strong> After setup, you'll personalize your <a href="/progress">Progress Tracker</a> by adding your name, goals, and tracking your completion of each phase. This editing process teaches Git workflows!
-  </div>
+    <div class="tip-box">
+    💡 <strong>First Step:</strong> After setup, you'll personalize your Progress Tracker by adding your name, goals, and tracking your completion of each phase. This editing process teaches Git workflows!
 </div>
 
 ## What You'll Build
@@ -137,9 +136,9 @@ By the end of this workshop, you'll have:
 
 ### Next Steps:
 
-1. **[Complete Setup](/setup)** - Get your development environment ready (10 minutes)
-2. **[View Schedule](/schedule)** - See the detailed 2-hour workshop timeline  
-3. **[Start Phase 1: Code](/phases/01-code)** - Begin your DevOps journey by editing your progress tracker!
+1. Complete Setup - Get your development environment ready (10 minutes)
+2. View Schedule - See the detailed 2-hour workshop timeline  
+3. Start Phase 1: Code - Begin your DevOps journey by editing your progress tracker!
 
 <div class="workshop-callout">
   <div class="workshop-callout-title">🎓 Learning Approach</div>

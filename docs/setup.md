@@ -1,6 +1,6 @@
 # Setup Instructions
 
-Verify prerequisites, then fork/clone. Time: 10 min. Stuck? See [/resources/troubleshooting](/resources/troubleshooting). Basics: Git tracks changes (like undo history); pnpm manages packages efficiently (faster installs than npm).
+Verify prerequisites, then fork/clone. Time: 10 min. Stuck? See troubleshooting. Basics: Git tracks changes (like undo history); pnpm manages packages efficiently (faster installs than npm).
 
 ## Prerequisites
 - GitHub account (free; 2FA recommended). Why? Hosts repo for collaboration (DevOps Culture).
@@ -15,13 +15,13 @@ Verify prerequisites, then fork/clone. Time: 10 min. Stuck? See [/resources/trou
 2. Clone: `git clone https://github.com/{{username}}/devops-workshop-vitepress.git` (Expected: Clones ~5MB). Why clone? Gets source code locally.
 3. `cd devops-workshop-vitepress`.
 4. `pnpm install` (Expected: Installs vitepress/jest/mermaid; creates node_modules/, pnpm-lock.yaml). Why install? Prepares tools for build (e.g., VitePress compiles Markdown to HTML).
-5. `pnpm dev` (Expected: "VitePress dev server running at http://localhost:5173"; open—see homepage). Why dev? Previews site locally (like testing before deploy).
+5. `pnpm dev` (Expected: "VitePress dev server running at localhost:5173"; open—see homepage). Why dev? Previews site locally (like testing before deploy).
 6. GitHub Pages: Settings > Pages > Source: Deploy from `gh-pages` > Save (Actions will create branch). Why? Enables auto-deploy later.
 
 ## Verification
 - Site loads? Edit index.md (add note) → Save → Auto-reload shows change. Reflection: You're in Code phase—edits are source; next, build transforms to artifact (compiled files).
 - Issues? `pnpm build` (Expected: Generates .vitepress/dist/ with HTML/JS/CSS). Why build? Creates artifact for production (faster, secure).
-- Next: [/agenda](/agenda) for schedule; [/progress](/progress) to track. Reflection: Setup done—fork/clone enables Code; install prepares for Build (artifact creation).
+- Next: agenda for schedule; progress to track. Reflection: Setup done—fork/clone enables Code; install prepares for Build (artifact creation).
 
 **Virtual Tip**: Share screen for clone; pair if stuck.
 
@@ -30,4 +30,4 @@ Verify prerequisites, then fork/clone. Time: 10 min. Stuck? See [/resources/trou
 - Port conflict: `pnpm dev --port 3000`.
 - Virtual workshop: Share your screen for clone commands.
 
-**Next**: Read /agenda.md, then dive into /theory/code.md.
+**Next**: Read agenda, then dive into theory/code.

@@ -10,7 +10,7 @@
 
 <div class="workshop-callout">
   <div class="workshop-callout-title">🎯 Your First DevOps Task</div>
-  <p><strong>You'll start by editing your <a href="/progress">Progress Tracker</a>!</strong> This isn't just tracking—it's practicing the Code phase through real Git workflows. Every edit teaches collaboration fundamentals.</p>
+  <p><strong>You'll start by editing your Progress Tracker!</strong> This isn't just tracking—it's practicing the Code phase through real Git workflows. Every edit teaches collaboration fundamentals.</p>
 </div>
 
 ## Learning Objectives
@@ -265,4 +265,4 @@ You've successfully completed the Code phase if:
 - [x] You can explain why this process promotes collaboration
 - [x] **Your progress tracker shows Phase 1 as completed** with personal notes
 
-[Continue to Phase 2: Build →](/phases/02-build)
+Continue to Phase 2: Build

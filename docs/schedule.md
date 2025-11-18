@@ -49,7 +49,7 @@
    pnpm install
    pnpm dev
    ```
-   - Open http://localhost:5173
+   - Open localhost:5173
    - Verify site loads
 
 4. **Enable GitHub Pages** (2 min)
@@ -500,10 +500,10 @@ git push origin main
 5. **Sharing**: Documentation and knowledge transfer
 
 #### Next Steps (2 min):
-- Complete [extensions](/resources/extensions) for extra credit
+- Complete extensions for extra credit
 - Customize your site and add more features
 - Apply these concepts to your real projects
-- Provide [feedback](/resources/feedback) to improve the workshop
+- Provide feedback to improve the workshop
 
 ---
 
