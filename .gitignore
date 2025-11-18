@@ -1,9 +1,9 @@
 # Dependencies
 node_modules/
-pnpm-lock.yaml  # Optional: Keep for reproducibility, but ignore for clean clones
 
 # Builds
 .vitepress/dist/
+.vitepress/cache/
 dist/
 coverage/
 dist.zip
