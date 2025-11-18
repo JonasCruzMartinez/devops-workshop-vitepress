@@ -7,7 +7,7 @@ export default withMermaid(
     description: 'Interactive CI/CD Workshop with GitHub Actions',
     base: '/',
 
-    ignoreDeadLinks: true,
+    ignoreDeadLinks: [/.*/],
 
     head: [
       ['link', { rel: 'icon', href: '/favicon.ico' }],
