@@ -53,15 +53,8 @@ Track your progress through each DevOps phase. **Edit this file to update your s
 - [ ] Made my first commit with a good commit message
 - [ ] Pushed my branch to GitHub
 - [ ] Created and merged my first Pull Request
-- [ ] Verified my changes are live on the main branch
+- [ ] Verified my changes are live on my main branch
 
-**My Code Phase Notes:**
-```
-[Add your reflections here during Phase 1]
-- What I learned about Git workflows:
-- Challenges I overcame:
-- Aha moments:
-```
 
 **Timestamp Completed:** `[Add when finished]`
 
@@ -83,14 +76,6 @@ Track your progress through each DevOps phase. **Edit this file to update your s
 - [ ] Pushed workflow and saw green build in GitHub Actions
 - [ ] Downloaded and verified the build artifact
 - [ ] Understood what build artifacts are and why they matter
-
-**My Build Phase Notes:**
-```
-[Add your reflections here during Phase 2]
-- What I learned about build automation:
-- How artifacts differ from source code:
-- Build process insights:
-```
 
 **Timestamp Completed:** `[Add when finished]`
 

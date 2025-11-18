@@ -5,7 +5,7 @@ export default withMermaid(
   defineConfig({
     title: 'DevOps Workshop',
     description: 'Interactive CI/CD Workshop with GitHub Actions',
-    base: '/',
+    base: '/devops-workshop-vitepress/',
 
     ignoreDeadLinks: true,
 

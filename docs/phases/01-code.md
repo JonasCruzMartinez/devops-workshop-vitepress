@@ -182,11 +182,7 @@ git status
 git add docs/progress.md
 
 # Commit with a descriptive message following conventional commits
-git commit -m "feat: personalize workshop progress tracker
-
-- Added personal information and learning goals
-- Updated Phase 1 checklist with initial progress
-- Documented first Git workflow experience"
+git commit -m "feat: personalize workshop progress"
 ```
 
 <div class="warning-box">
@@ -268,40 +264,5 @@ You've successfully completed the Code phase if:
 - [x] You understand the Git workflow: branch → commit → push → PR → merge
 - [x] You can explain why this process promotes collaboration
 - [x] **Your progress tracker shows Phase 1 as completed** with personal notes
-
-### 🔍 Self-Assessment Questions
-
-1. **How does editing the progress tracker teach DevOps Culture?**
-   <details>
-   <summary>Click to see answer</summary>
-   Editing the progress tracker practices collaborative development through Git workflows, demonstrates transparent progress sharing, and creates documentation—all core DevOps Culture principles.
-   </details>
-
-2. **Why is it important to make atomic commits?**
-   <details>
-   <summary>Click to see answer</summary>
-   Atomic commits ensure each change is self-contained and understandable. They make it easier to identify when and why a change was made, simplifying debugging and collaboration.
-   </details>
-
-3. **What are the benefits of using Pull Requests?**
-   <details>
-   <summary>Click to see answer</summary>
-   Pull Requests facilitate code review, discussion, and collaboration before merging changes. They serve as a record of what changes were made and why, enhancing project documentation.
-   </details>
-
-4. **How does the Git workflow support Continuous Integration/Continuous Deployment (CI/CD)?**
-   <details>
-   <summary>Click to see answer</summary>
-   The Git workflow's branch → commit → push → PR → merge process integrates seamlessly with CI/CD pipelines. It ensures that only tested and reviewed code is deployed, improving software quality and delivery speed.
-   </details>
-
-### 🚀 Ready for Phase 2?
-
-**Before moving on:**
-1. **Update your progress tracker** to mark Phase 1 as complete
-2. **Commit and push** this update to practice the Git workflow again
-3. **Share your progress** in the workshop chat
-
-Congratulations! You've mastered collaborative development and created your personal DevOps learning record. Now let's automate the build process:
 
 [Continue to Phase 2: Build →](/phases/02-build)
