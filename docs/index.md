@@ -8,7 +8,7 @@ hero:
   actions:
     - theme: brand
       text: Start Workshop
-      link: /setup
+      link: #
     - theme: alt
       text: Bekijk Voortgangs Tracker
       link: /progress

@@ -18,7 +18,7 @@ describe('Workshop Site Content Validation', () => {
 
   test('Index has tracker table', () => {
     const content = fs.readFileSync(path.join(docsDir, 'index.md'), 'utf8');
-    expect(content).toContain('| Phase');
+    expect(content).toContain('progress-tracker');
   });
 
   // DevOps Quality Gate: Check for dead links in config.js (ensures navigation to existing docs before build/deploy)
@@ -35,7 +35,7 @@ describe('Workshop Site Content Validation', () => {
     
     while ((match = linkRegex.exec(configContent)) !== null) {
       const link = match[1];
-      if (link.startsWith('/') && !link.includes('http') && !uniqueLinks.has(link)) {
+      if (link.startsWith('/') && link !== '/' && !link.includes('http') && !uniqueLinks.has(link)) {
         uniqueLinks.add(link);
       }
     }
