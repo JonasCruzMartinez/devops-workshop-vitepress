@@ -8,6 +8,8 @@ dist/
 coverage/
 dist.zip
 
+package-lock.json
+
 # Logs
 *.log
 npm-debug.log*
