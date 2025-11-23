@@ -1,0 +1,39 @@
+# Add this job after your existing build and test jobs
+release:
+  if: startsWith(github.ref, 'refs/tags/v')
+  needs: [build, test]
+  runs-on: ubuntu-latest
+  
+  steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup pnpm
+      uses: pnpm/action-setup@v2
+      with:
+        version: 8
+        
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 18
+        cache: 'pnpm'
+        
+    - name: Install dependencies
+      run: pnpm install --frozen-lockfile
+      
+    - name: Build for release
+      run: pnpm build
+      
+    - name: Create release archive
+      run: |
+        zip -r workshop-site-${{ github.ref_name }}.zip .vitepress/dist/
+        
+    - name: Create GitHub Release
+      uses: softprops/action-gh-release@v1
+      with:
+        files: workshop-site-${{ github.ref_name }}.zip
+        generate_release_notes: true
+        name: DevOps Workshop v${{ github.ref_name }}
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
