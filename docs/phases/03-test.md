@@ -335,8 +335,8 @@ jobs:
 # Creëer een nieuwe branch
 git checkout -b feat/add-testing
 
-# Voeg alle test bestanden toe
-git add jest.config.js tests/ .github/workflows/test.yml package.json
+# Voeg alle bestanden toe
+git add .
 
 # Commit met een beschrijvend bericht
 git commit -m "feat: voeg geautomatiseerde testing toe
