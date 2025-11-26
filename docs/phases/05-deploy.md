@@ -62,7 +62,14 @@ graph TD
 
 ### Stap 1: Creëer de Deploy Workflow
 
-Maak een nieuw bestand `.github/workflows/deploy.yml`:
+1. **Creëer de workflow bestand**
+
+```bash
+code .github/workflows/deploy.yml
+```
+
+
+2. **Voeg de deploy workflow content toe**
 
 ```yaml
 name: Deploy VitePress site to Pages
