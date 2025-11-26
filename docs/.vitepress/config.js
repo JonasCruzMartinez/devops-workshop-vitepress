@@ -44,7 +44,6 @@ export default withMermaid(
         {
           text: 'Bronnen',
           items: [
-            { text: 'Probleemoplossing', link: '/resources/troubleshooting' },
             { text: 'Uitbreidingen', link: '/resources/extensions' },
             { text: 'Feedback', link: '/resources/feedback' }
           ]
@@ -86,7 +85,6 @@ export default withMermaid(
           {
             text: 'Bronnen',
             items: [
-              { text: 'Probleemoplossing', link: '/resources/troubleshooting' },
               { text: 'Uitbreidingen', link: '/resources/extensions' },
               { text: 'Feedback', link: '/resources/feedback' }
             ]

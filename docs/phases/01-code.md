@@ -78,13 +78,12 @@ Een consistent formaat gebruiken helpt bij automatisering en duidelijkheid:
 ## Hands-On Oefening
 
 ### Stap 1: Fork en Clone
-<div class=\"step-counter\">1</div>
 
 Maak eerst je eigen kopie van de workshop repository:
 
 1. **Fork de repository**
    - Ga naar de workshop GitHub repository
-   - Klik op de \"Fork\" knop rechtsboven
+   - Klik op de "Fork" knop rechtsboven
    - Kies je persoonlijke account als bestemming
 
 2. **Clone je fork lokaal**
@@ -97,12 +96,11 @@ Maak eerst je eigen kopie van de workshop repository:
 3. **Stel de upstream remote in**
 
    ```bash
-   git remote add upstream https://github.com/ORIGINELE_EIGENAAR/devops-workshop-vitepress.git
+   git remote add upstream https://github.com/undead2146/devops-workshop-vitepress.git
    git remote -v  # Verifieer dat zowel origin als upstream zijn ingesteld
    ```
 
 ### Stap 2: Creëer Je Eerste Feature Branch
-<div class=\"step-counter\">2</div>
 
 Werk nooit direct op de main branch! Maak altijd een feature branch:
 
@@ -114,12 +112,9 @@ git checkout -b feat/code-fase
 git branch
 ```
 
-<div class=\"tip-box\">
 💡 <strong>Naamgevingsconventie:</strong> Gebruik beschrijvende branch namen met prefixen zoals <code>feat/</code>, <code>fix/</code>, of <code>docs/</code>
-</div>
 
 ### Stap 3: Maak Je Eerste Wijzigingen - Personaliseer Je Voortgangstracker
-<div class=\"step-counter\">3</div>
 
 **Hier begint DevOps oefening!** Je gaat je voortgangstracker bewerken om Git workflows te leren:
 
@@ -153,24 +148,21 @@ git branch
    - [ ] Geverifieerd dat mijn wijzigingen live zijn op de main branch
 
    **Mijn Code Fase Notities:**
-   ```
+
    Begonnen met DevOps leren door hands-on oefening!
    - Git workflow voelt nu natuurlijker
    - Begrijp hoe branches veilige samenwerking mogelijk maken
    - Enthousiast om mijn wijzigingen later automatisch te zien deployen
-   ```
+
 
    **Tijdstempel Voltooid:** [Laat nu leeg]
    ```
 
 4. **Sla het bestand op**
 
-<div class=\"tip-box\">
 💡 <strong>Waarom Dit Belangrijk Is:</strong> Het bewerken van je voortgangstracker leert Git workflows terwijl je je persoonlijke leerrecord creëert. Deze dubbele aanpak demonstreert DevOps efficiëntie principes!
-</div>
 
 ### Stap 4: Stage en Commit Je Wijzigingen
-<div class=\"step-counter\">4</div>
 
 Laten we nu je voortgangstracker updates opslaan in Git:
 
@@ -185,12 +177,9 @@ git add docs/progress.md
 git commit -m \"feat: personaliseer workshop voortgang\"
 ```
 
-<div class=\"warning-box\">
 ⚠️ <strong>Commit Message Formaat:</strong> De eerste regel is een korte samenvatting (max 50 karakters), gevolgd door een lege regel, dan gedetailleerde uitleg indien nodig.
-</div>
 
 ### Stap 5: Push Je Branch
-<div class=\"step-counter\">5</div>
 
 Upload je branch naar GitHub:
 
@@ -213,7 +202,6 @@ To https://github.com/JOUW_GEBRUIKERSNAAM/devops-workshop-vitepress.git
 ```
 
 ### Stap 6: Creëer een Pull Request
-<div class=\"step-counter\">6</div>
 
 Laten we nu je wijzigingen voorstellen aan de main repository:
 
@@ -238,21 +226,16 @@ Laten we nu je wijzigingen voorstellen aan de main repository:
 
 5. **Klik op \"Create Pull Request\"**
 
-<div class=\"tip-box\">
 💡 <strong>PR Beschrijving Tips:</strong> Gebruik markdown voor opmaak, refereer gerelateerde issues, en leg de \"waarom\" achter je wijzigingen uit.
-</div>
 
 ### Stap 7: Code Review en Merge
-<div class=\"step-counter\">7</div>
 
 Na het aanmaken van de Pull Request:
 - Vraag reviews aan van instructeurs of peers
 - Reageer op feedback en maak wijzigingen indien nodig
 - Zodra goedgekeurd, merge de Pull Request naar de main branch
 
-<div class=\"tip-box\">
 💡 <strong>Code Review Best Practices:</strong> Review voor duidelijkheid, onderhoudbaarheid en naleving van project standaarden. Geef constructieve feedback.
-</div>
 
 ## Validatie & Volgende Stappen
 
