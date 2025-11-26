@@ -228,7 +228,6 @@ describe('Workshop Site Content Validatie', () => {
   // Test 6: Verifieer dat resource pagina's bestaan
   test('Resource pagina\'s bestaan', () => {
     const resourceFiles = [
-      'resources/troubleshooting.md',
       'resources/extensions.md',
       'resources/feedback.md'
     ];
