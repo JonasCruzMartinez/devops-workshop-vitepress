@@ -244,9 +244,9 @@ Je hebt het complete **CALMS** framework ervaren:
   <p>Breng je nieuwe DevOps vaardigheden naar het volgende niveau</p>
 </div>
 
-1. **[Verken Uitbreidingen](/resources/extensions)** - Voeg geavanceerde features toe aan je pipeline
-2. **[Deel Je Prestatie](#)** - Voeg je site URL toe aan de workshop chat
-3. **[Geef Feedback](/resources/feedback)** - Help deze workshop te verbeteren voor anderen
+1. **Verken Uitbreidingen** - Voeg geavanceerde features toe aan je pipeline
+2. **Deel Je Prestatie** - Voeg je site URL toe aan de workshop chat
+3. **Geef Feedback** - Help deze workshop te verbeteren voor anderen
 4. **Pas Toe op Echte Projecten** - Implementeer CI/CD in je werk of persoonlijke projecten
 
 ### 🎓 Geavanceerde DevOps Topics om Te Verkennen

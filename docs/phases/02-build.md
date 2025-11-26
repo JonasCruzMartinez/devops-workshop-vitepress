@@ -74,7 +74,7 @@ Maak het GitHub Actions workflow bestand om je build te automatiseren:
 
    ```bash
    mkdir -p .github/workflows
-   touch .github/workflows/build.yml
+   code .github/workflows/build.yml
    ```
 
 2. **Voeg de build workflow content toe**
@@ -242,6 +242,6 @@ Je hebt de Build fase succesvol voltooid als:
 
 Nu je een werkend build proces hebt, is het tijd om **kwaliteitsborging** toe te voegen!
 
-[Ga verder naar Fase 3: Test →](/phases/03-test)
+Ga verder naar Fase 3: Test
 
 Denk na over hoe geautomatiseerde builds jouw development workflow verbeteren. Geen meer "het werkt op mijn machine" problemen—de build is consistent en betrouwbaar!

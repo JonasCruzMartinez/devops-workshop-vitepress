@@ -25,7 +25,7 @@ Waar sta je?
 - [ ] **Bekwaam (85%)**: Tests slagen; release aangemaakt; fout opgelost
 - [ ] **Geavanceerd (100%)**: Volledig groen; uitbreiding toegevoegd (bijv. lint)
 
-Zie [Voortgang](/progress) checklist. Wat te verbeteren?
+Zie Voortgang checklist. Wat te verbeteren?
 
 ## Open Notities
 

@@ -130,7 +130,7 @@ Heb je een coole uitbreiding gebouwd? Deel het!
 3. Documenteer je aanpak
 4. Help anderen leren!
 
-**Experimenteer en deel via [Feedback](/resources/feedback)!**
+**Experimenteer en deel via Feedback!**
 
 ## Challenge: Volledige DevOps Stack
 

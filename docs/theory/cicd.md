@@ -157,13 +157,13 @@ Volledige cyclus:
 
 Deze hele workshop bouwt een complete CI/CD pipeline:
 
-1. **[Code Fase](/phases/01-code)** - Git workflows en PRs
-2. **[Build Fase](/phases/02-build)** - Artifact generatie
-3. **[Test Fase](/phases/03-test)** - Quality gates
-4. **[Release Fase](/phases/04-release)** - Versioned distributies
-5. **[Deploy Fase](/phases/05-deploy)** - Live deployment
+1. **Code Fase** - Git workflows en PRs
+2. **Build Fase** - Artifact generatie
+3. **Test Fase** - Quality gates
+4. **Release Fase** - Versioned distributies
+5. **Deploy Fase** - Live deployment
 
-**Start hier**: [Hands-on Code & Build](/hands-on/code-build)
+**Start hier**: Hands-on Code & Build
 
 ## Reflectie
 

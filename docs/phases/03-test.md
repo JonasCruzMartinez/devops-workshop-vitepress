@@ -139,7 +139,7 @@ Stel de test structuur in:
 mkdir -p tests
 
 # Creëer het hoofd test bestand
-touch tests/site.test.js
+code tests/site.test.js
 ```
 
 ### Stap 4: Schrijf Je Eerste Tests
@@ -369,7 +369,7 @@ Je hebt de Test fase succesvol voltooid als:
 
 Nu je een robuust test framework hebt, is het tijd om **versioned releases** te creëren!
 
-[Ga verder naar Fase 4: Release →](/phases/04-release)
+Ga verder naar Fase 4: Release
 
 <div class="workshop-callout">
   <div class="workshop-callout-title">💡 Testing Mindset</div>

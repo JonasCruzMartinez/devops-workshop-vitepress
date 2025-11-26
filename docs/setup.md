@@ -2,10 +2,6 @@
 
 Welkom bij de DevOps Workshop! Deze pagina helpt je om je ontwikkelomgeving klaar te maken voor de workshop. **Geschatte tijd: 10 minuten**
 
-<div class="tip-box">
-💡 <strong>Hulp Nodig?</strong> Als je vastloopt, bekijk dan de <a href="/resources/troubleshooting">Probleemoplossing Gids</a>
-</div>
-
 ## Waarom Deze Setup?
 
 Voordat we beginnen, is het belangrijk te begrijpen waarom we deze tools gebruiken:
@@ -182,10 +178,10 @@ pnpm dev
 
 **Verwachte output**:
 ```
-VitePress dev server running on http://localhost:5173
+VitePress dev server running on localhost:5173
 ```
 
-**Open in je browser**: [http://localhost:5173](http://localhost:5173)
+**Open in je browser**: localhost:5173
 
 Je zou de workshop homepage moeten zien! 🎉
 
@@ -223,7 +219,7 @@ Je zou de workshop homepage moeten zien! 🎉
 Laten we controleren of alles werkt!
 
 ### Test 1: Dev Server Draait
-- ✅ Site laadt op `http://localhost:5173`
+- ✅ Site laadt op `localhost:5173`
 - ✅ Je ziet de workshop homepage
 
 ### Test 2: Hot Reload Werkt
@@ -254,11 +250,6 @@ pnpm build
 - ✅ De dev server werkend gekregen
 - ✅ GitHub Pages geconfigureerd
 
-### Volgende Stappen
-
-1. **Bekijk de Agenda**: [Workshop Agenda](/agenda) voor het tijdschema
-2. **Bekijk het Schema**: [Gedetailleerd Schema](/schedule) voor timing en presentator scripts
-3. **Start Fase 1**: [Code Fase](/phases/01-code) - Begin je DevOps reis!
 
 <div class="success-box">
 🚀 <strong>Setup Voltooid!</strong> Fork en clone maakten de Code fase mogelijk; install bereidde voor op de Build fase. Je bent nu klaar om te leren door te doen!
@@ -294,7 +285,7 @@ sudo npm install -g pnpm
 ### Build Errors
 - Controleer Node.js versie (moet ≥18 zijn)
 - Verwijder `node_modules/` en run `pnpm install` opnieuw
-- Bekijk de [Probleemoplossing Gids](/resources/troubleshooting)
+- Bekijk de Probleemoplossing Gids
 
 ---
 

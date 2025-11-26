@@ -137,9 +137,9 @@ Aan het einde van deze workshop heb je:
 
 ### Volgende Stappen:
 
-1. **[Voltooi Setup](/setup)** - Maak je ontwikkelomgeving klaar (10 minuten)
-2. **[Bekijk Schema](/schedule)** - Zie de gedetailleerde 2-uur workshop tijdlijn  
-3. **[Start Fase 1: Code](/phases/01-code)** - Begin je DevOps reis door je voortgangstracker te bewerken!
+1. **Voltooi Setup** - Maak je ontwikkelomgeving klaar (10 minuten)
+2. **Bekijk Schema** - Zie de gedetailleerde 2-uur workshop tijdlijn  
+3. **Start Fase 1: Code** - Begin je DevOps reis door je voortgangstracker te bewerken!
 
 <div class="workshop-callout">
   <div class="workshop-callout-title">🎓 Leer Aanpak</div>

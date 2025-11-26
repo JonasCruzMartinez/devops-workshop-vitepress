@@ -89,7 +89,7 @@ Maak eerst je eigen kopie van de workshop repository:
 2. **Clone je fork lokaal**
 
    ```bash
-   git clone https://github.com/JOUW_GEBRUIKERSNAAM/devops-workshop-vitepress.git
+   git clone https://github.com/JOUW_GEBRUIKERSNAAM/devops-workshop-vitepress.git # 
    cd devops-workshop-vitepress
    ```
 
@@ -140,7 +140,7 @@ git branch
    **Voltooiing Checklist:**
    - [x] De workshop repository geforkt naar mijn GitHub account
    - [x] Mijn fork lokaal gekloond en de site werkend gekregen (`pnpm dev`)
-   - [x] Mijn eerste feature branch aangemaakt (`feat/personaliseer-tracker`)
+   - [x] Mijn eerste feature branch aangemaakt (`feat/code-fase`)
    - [x] **Deze voortgangstracker bewerkt** met mijn persoonlijke informatie
    - [ ] Mijn eerste commit gemaakt met een goede commit message
    - [ ] Mijn branch gepusht naar GitHub
@@ -185,7 +185,7 @@ Upload je branch naar GitHub:
 
 ```bash
 # Push je feature branch naar je fork
-git push origin feat/personaliseer-site
+git push origin feat/code-phase
 ```
 
 Je zou output moeten zien zoals:
@@ -198,7 +198,7 @@ Compressing objects: 100% (3/3), done.
 Writing objects: 100% (3/3), 362 bytes | 181.00 KiB/s, done.
 Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
 To https://github.com/JOUW_GEBRUIKERSNAAM/devops-workshop-vitepress.git
- * [new branch]      feat/personaliseer-site -> feat/personaliseer-site
+ * [new branch]      feat/code-fase -> feat/code-fase
 ```
 
 ### Stap 6: Creëer een Pull Request
@@ -207,7 +207,7 @@ Laten we nu je wijzigingen voorstellen aan de main repository:
 
 1. **Ga naar het Pull Requests tabblad** van je geforkte repository op GitHub
 2. **Klik op \"New Pull Request\"**
-3. **Selecteer je feature branch** (`feat/personaliseer-site`) als de compare branch
+3. **Selecteer je feature branch** (`feat/code-fase`) als de compare branch
 4. **Voeg een titel en beschrijving toe** voor je Pull Request:
    - **Titel:** `feat: personaliseer workshop voortgangstracker`
    - **Beschrijving:**
@@ -248,4 +248,4 @@ Je hebt de Code fase succesvol voltooid als:
 - [x] Je kunt uitleggen waarom dit proces samenwerking bevordert
 - [x] **Je voortgangstracker toont Fase 1 als voltooid** met persoonlijke notities
 
-[Ga verder naar Fase 2: Build →](/phases/02-build)
+Ga verder naar Fase 2: Build

@@ -200,10 +200,10 @@ Houd je voortgang bij door elke DevOps fase. **Bewerk dit bestand om je status b
 
 ## Workshop Bronnen & Vervolgstappen
 
-- 📚 **Uitbreidingen om te Proberen:** [Workshop Uitbreidingen](/resources/extensions)
-- 🔧 **Hulp Nodig?** [Probleemoplossing Gids](/resources/troubleshooting)  
-- 💭 **Geef Feedback:** [Workshop Feedback](/resources/feedback)
-- 📖 **Diepgaande Theorie:** [CI/CD Overzicht](/theory/cicd)
+- 📚 **Uitbreidingen om te Proberen:** Workshop Uitbreidingen
+- 🔧 **Hulp Nodig?** Probleemoplossing Gids  
+- 💭 **Geef Feedback:** Workshop Feedback
+- 📖 **Diepgaande Theorie:** CI/CD Overzicht
 
 <div class="workshop-callout">
   <div class="workshop-callout-title">🎓 Workshop Voltooid!</div>

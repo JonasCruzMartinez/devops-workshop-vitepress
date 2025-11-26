@@ -85,6 +85,6 @@ A: We willen weten of het *gebouwde* product werkt, niet alleen de broncode. Het
 A: De pipeline stopt. Fix de bug of update de test, dan probeer opnieuw.
 
 ## Hands-On
-Ga naar [Hands-on: Test & Release](/hands-on/test-release) om tests toe te voegen!
+Ga naar Hands-on: Test & Release om tests toe te voegen!
 
 **Reflectie**: Getest artifact → klaar voor **Release** (versioneren) en **Deploy** (live gaan).

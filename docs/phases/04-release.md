@@ -249,7 +249,7 @@ Deze dubbele aanpak maakt zowel **continuous delivery** als **stabiele distribut
 
 Nu je releases hebt, is het tijd voor de finale stap: **automatische deployment naar productie**!
 
-[Ga verder naar Fase 5: Deploy →](/phases/05-deploy)
+Ga verder naar Fase 5: Deploy
 
 <div class="workshop-callout">
   <div class="workshop-callout-title">🏷️ Release Strategie</div>

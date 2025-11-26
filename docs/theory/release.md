@@ -97,6 +97,6 @@ A: Releases zijn voor belangrijke milestones. Te veel releases creëren ruis. De
 A: Het gebouwde artifact (`.vitepress/dist/`)—klaar om te hosten op elke webserver.
 
 ## Hands-On
-Ga naar [Hands-on: Test & Release](/hands-on/test-release) om je eerste release te maken!
+Ga naar Hands-on: Test & Release om je eerste release te maken!
 
 **Reflectie**: Released artifact → nu klaar voor **Deploy** (automatisch live gaan).

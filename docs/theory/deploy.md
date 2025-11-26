@@ -87,6 +87,6 @@ A: Meestal 1-3 minuten na merge.
 A: Nee, GitHub Pages doet atomic deployments (oude versie → nieuwe versie zonder tussenstap).
 
 ## Hands-On
-Ga naar [Hands-on: Deploy](/hands-on/deploy) om je deployment pipeline te voltooien!
+Ga naar Hands-on: Deploy om je deployment pipeline te voltooien!
 
 **Reflectie**: Volledige CI/CD cyclus compleet: Code → Build → Test → Release → **Deploy** 🎉

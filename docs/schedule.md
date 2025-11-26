@@ -49,7 +49,7 @@
    pnpm install
    pnpm dev
    ```
-   - Open http://localhost:5173
+   - Open localhost:5173
    - Controleer of de site laadt
 
 4. **Activeer GitHub Pages** (2 min)
@@ -388,10 +388,10 @@ git push origin main
 5. **Delen**: Documentatie en kennisoverdracht
 
 #### Vervolgstappen (2 min):
-- Voltooi [extensions](/resources/extensions) voor extra punten
+- Voltooi extensions voor extra punten
 - Personaliseer je site en voeg meer features toe
 - Pas deze concepten toe op je echte projecten
-- Geef [feedback](/resources/feedback) om de workshop te verbeteren
+- Geef feedback om de workshop te verbeteren
 
 ---
 

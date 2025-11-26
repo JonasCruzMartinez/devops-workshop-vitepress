@@ -83,6 +83,6 @@ graph LR
 A: PRs en CI testen de code op een schone omgeving (de build server). Als het daar werkt, werkt het waarschijnlijk overal, in tegenstelling tot je lokale setup die uniek kan zijn.
 
 ## Hands-On
-Ga naar [Hands-on: Code & Build](/hands-on/code-build) om dit nu toe te passen!
+Ga naar Hands-on: Code & Build om dit nu toe te passen!
 
 **Reflectie**: Na de Code fase gaan we een **artifact** bouwen (een gecompileerde versie van je bewerkingen).

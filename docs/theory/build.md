@@ -77,6 +77,6 @@ A: Om direct te weten of onze wijzigingen de build breken (Continuous Integratio
 A: De pipeline stopt direct. Geen kapotte code naar productie (Lean/Quality Gate).
 
 ## Hands-On
-Ga naar [Hands-on: Code & Build](/hands-on/code-build) om je build pipeline te maken!
+Ga naar Hands-on: Code & Build om je build pipeline te maken!
 
 **Reflectie**: We hebben nu een artifact. Maar werkt het ook zoals bedoeld? Volgende stap: **Testen**.
