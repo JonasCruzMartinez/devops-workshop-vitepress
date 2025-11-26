@@ -71,7 +71,7 @@ Houd je voortgang bij door elke DevOps fase. **Bewerk dit bestand om je status b
 </div>
 
 **Voltooiing Checklist:**
-- [ ] `.github/workflows/ci.yml` bestand aangemaakt
+- [ ] `.github/workflows/build.yml` bestand aangemaakt
 - [ ] Succesvol `pnpm build` lokaal uitgevoerd
 - [ ] Workflow gepusht en groene build gezien in GitHub Actions
 - [ ] Het build artifact gedownload en geverifieerd

@@ -135,7 +135,7 @@ git checkout -b feat/add-releases
 pnpm build
 
 # Commit de workflow wijzigingen
-git add .github/workflows/ci.yml
+git add .github/workflows/release.yml
 git commit -m "feat: voeg geautomatiseerde release workflow toe
 
 - Trigger releases bij versie tags

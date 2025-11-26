@@ -140,7 +140,7 @@ Laten we je complete CI/CD pipeline testen:
 git checkout -b feat/complete-pipeline
 
 # Voeg de deploy job toe
-git add .github/workflows/ci.yml
+git add .github/workflows/deploy.yml
 
 # Update je voortgangstracker om voltooiing te tonen
 # Bewerk docs/progress.md en markeer Fase 5 als compleet

@@ -176,7 +176,7 @@ Nu de workflow klaar is, laten we het in versiebeheer plaatsen:
 git checkout -b feat/add-build-workflow
 
 # Voeg de workflow toe
-git add .github/workflows/ci.yml
+git add .github/workflows/build.yml
 
 # Commit met een beschrijvend bericht
 git commit -m \"feat: voeg geautomatiseerde build workflow toe

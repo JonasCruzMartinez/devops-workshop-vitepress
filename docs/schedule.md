@@ -180,7 +180,7 @@ git push origin feat/personaliseer-site
 
 <div class="step-counter">1</div> **Creëer workflow bestand** (3 min)
 
-Creëer `.github/workflows/ci.yml`:
+Creëer `.github/workflows/build.yml`:
 
 ```yaml
 name: CI Pipeline
@@ -267,7 +267,7 @@ Creëer `jest.config.js` (code blijft Engels)
 
 <div class="step-counter">3</div> **Update CI workflow** (3 min)
 
-Voeg test job toe aan `.github/workflows/ci.yml`
+Voeg test job toe aan `.github/workflows/test.yml`
 
 <div class="step-counter">4</div> **Test en commit** (3 min)
 
@@ -303,7 +303,7 @@ git push origin main
 
 <div class="step-counter">1</div> **Voeg release job toe aan CI** (5 min)
 
-Update `.github/workflows/ci.yml` (YAML code blijft Engels)
+Update `.github/workflows/test.yml` (YAML code blijft Engels)
 
 <div class="step-counter">2</div> **Creëer eerste release** (4 min)
 
@@ -344,7 +344,7 @@ git push origin v1.0.0
 
 <div class="step-counter">1</div> **Voeg deploy job toe** (6 min)
 
-Update `.github/workflows/ci.yml` (YAML code blijft Engels)
+Update `.github/workflows/test.yml` (YAML code blijft Engels)
 
 <div class="step-counter">2</div> **Deploy en test** (4 min)
 

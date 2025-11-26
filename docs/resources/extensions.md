@@ -11,7 +11,7 @@ Voeg ESLint job toe voor code kwaliteit.
 pnpm add -D eslint eslint-plugin-markdown
 ```
 
-Update `.github/workflows/ci.yml`:
+Update `.github/workflows/lint.yml`:
 ```yaml
 lint:
   runs-on: ubuntu-latest
