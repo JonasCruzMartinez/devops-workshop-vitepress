@@ -65,51 +65,58 @@ Versienummers volgen het patroon: `MAJOR.MINOR.PATCH`
 
 ## Hands-On Oefening
 
-### Stap 1: Voeg Release Job Toe aan CI Workflow
-<div class="step-counter">1</div>
+<div class="tip-box">
+  📋 <strong>Reference:</strong> Zie <code>.github/workflows/release.yml</code> voor de complete workflow.
+</div>
 
-Update je `.github/workflows/ci.yml` om release automatisering toe te voegen:
+### Stap 1: Creëer de Release Workflow
+
+Maak een nieuw bestand `.github/workflows/release.yml` om release automatisering toe te voegen:
 
 ```yaml
-# Voeg deze job toe na je bestaande build en test jobs
-release:
-  if: startsWith(github.ref, 'refs/tags/v')
-  needs: [build, test]
-  runs-on: ubuntu-latest
-  
-  steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
-      
-    - name: Setup pnpm
-      uses: pnpm/action-setup@v2
-      with:
-        version: 8
+name: Release Phase
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
         
-    - name: Setup Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: 18
-        cache: 'pnpm'
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+          
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: 'pnpm'
+          
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
         
-    - name: Install dependencies
-      run: pnpm install --frozen-lockfile
-      
-    - name: Build for release
-      run: pnpm build
-      
-    - name: Create release archive
-      run: |
-        zip -r workshop-site-${{ github.ref_name }}.zip .vitepress/dist/
+      - name: Build for release
+        run: pnpm build
         
-    - name: Create GitHub Release
-      uses: softprops/action-gh-release@v1
-      with:
-        files: workshop-site-${{ github.ref_name }}.zip
-        generate_release_notes: true
-        name: DevOps Workshop ${{ github.ref_name }}
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Create release archive
+        run: |
+          zip -r workshop-site-${{ github.ref_name }}.zip .vitepress/dist/
+          
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: workshop-site-${{ github.ref_name }}.zip
+          generate_release_notes: true
+          name: DevOps Workshop ${{ github.ref_name }}
 ```
 
 **Wat doet deze workflow?**
@@ -119,7 +126,6 @@ release:
 - **Release**: Maakt automatisch een GitHub release met notes
 
 ### Stap 2: Test Lokaal en Commit
-<div class="step-counter">2</div>
 
 ```bash
 # Creëer een nieuwe branch voor release functionaliteit
@@ -141,7 +147,6 @@ git push origin feat/add-releases
 ```
 
 ### Stap 3: Creëer Je Eerste Release
-<div class="step-counter">3</div>
 
 Nu je eerste versie tag aanmaken om een release te triggeren:
 
@@ -162,7 +167,6 @@ git push origin v1.0.0
 4. GitHub release wordt aangemaakt met downloadbare assets
 
 ### Stap 4: Verifieer Je Release
-<div class="step-counter">4</div>
 
 1. **Ga naar GitHub Actions** en bekijk de release workflow run
 2. **Bezoek je repository's Releases tab**
@@ -174,7 +178,6 @@ git push origin v1.0.0
 </div>
 
 ### Stap 5: Update Je Voortgangstracker
-<div class="step-counter">5</div>
 
 Bewerk je `docs/progress.md` om Fase 4 als compleet te markeren:
 
@@ -189,13 +192,13 @@ Bewerk je `docs/progress.md` om Fase 4 als compleet te markeren:
 - [x] Het verschil begrepen tussen releases en deployments
 
 **Mijn Release Fase Notities:**
-```
+
 Release management brengt structuur naar softwaredistributie!
 - Semantic versioning biedt duidelijke change communicatie
 - Geautomatiseerde releases elimineren handmatige packaging fouten
 - ZIP archives maken offline distributie en backup mogelijk
 - GitHub releases creëren een professionele distributie ervaring
-```
+
 
 **Tijdstempel Voltooid:** [Huidige datum/tijd]
 ```

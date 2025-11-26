@@ -56,47 +56,52 @@ graph TD
 
 ## Hands-On Oefening: Voltooi Je CI/CD Pipeline
 
-### Stap 1: Voeg Deploy Job Toe aan Workflow
-<div class="step-counter">1</div>
+<div class="tip-box">
+  📋 <strong>Reference:</strong> Zie <code>.github/workflows/deploy.yml</code> voor de complete workflow.
+</div>
 
-Voeg de deploy job toe aan je `.github/workflows/ci.yml`:
+### Stap 1: Creëer de Deploy Workflow
+
+Maak een nieuw bestand `.github/workflows/deploy.yml`:
 
 ```yaml
-# Voeg deze job toe na je bestaande jobs
-deploy:
-  if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-  needs: [build, test]
-  runs-on: ubuntu-latest
-  
-  permissions:
-    contents: write
-  
-  steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
-      
-    - name: Setup pnpm
-      uses: pnpm/action-setup@v2
-      with:
-        version: 8
+name: Deploy Phase
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
         
-    - name: Setup Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: 18
-        cache: 'pnpm'
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+          
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: 'pnpm'
+          
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
         
-    - name: Install dependencies
-      run: pnpm install --frozen-lockfile
-      
-    - name: Build site
-      run: pnpm build
-      
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: .vitepress/dist
+      - name: Build site
+        run: pnpm build
+        
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .vitepress/dist
 ```
 
 **Wat doet deze workflow?**
@@ -106,7 +111,6 @@ deploy:
 - **Deploy**: Pusht gebouwde site naar gh-pages branch
 
 ### Stap 2: Test de Volledige Pipeline
-<div class="step-counter">2</div>
 
 Laten we je complete CI/CD pipeline testen:
 
@@ -132,7 +136,6 @@ git push origin feat/complete-pipeline
 ```
 
 ### Stap 3: Merge en Bekijk de Magie
-<div class="step-counter">3</div>
 
 1. **Creëer en merge je PR** naar main
 2. **Bekijk GitHub Actions** de complete pipeline draaien:
@@ -146,7 +149,6 @@ git push origin feat/complete-pipeline
 </div>
 
 ### Stap 4: Vier en Documenteer Je Prestatie
-<div class="step-counter">4</div>
 
 Update je voortgangstracker een laatste keer:
 
@@ -161,13 +163,11 @@ Update je voortgangstracker een laatste keer:
 - [x] De volledige CI/CD pipeline voltooid van code tot productie
 
 **Mijn Deploy Fase Notities:**
-```
 De complete DevOps transformatie!
 - Geautomatiseerde deployment elimineert handmatige fouten
 - Continuous delivery biedt onmiddellijke gebruikerswaarde
 - De volledige pipeline geeft vertrouwen in elke wijziging
 - DevOps transformeert hoe we software leveren
-```
 
 **Tijdstempel Voltooid:** [Huidige datum/tijd]
 ```

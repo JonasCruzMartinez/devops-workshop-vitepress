@@ -62,8 +62,11 @@ GitHub Actions automatiseert het build proces:
 
 ## Hands-On Oefening
 
+<div class="tip-box">
+  📋 <strong>Reference:</strong> Zie <code>.github/workflows/build.yml</code> voor de complete workflow.
+</div>
+
 ### Stap 1: Creëer de Build Workflow
-<div class=\"step-counter\">1</div>
 
 Maak het GitHub Actions workflow bestand om je build te automatiseren:
 
@@ -71,13 +74,13 @@ Maak het GitHub Actions workflow bestand om je build te automatiseren:
 
    ```bash
    mkdir -p .github/workflows
-   touch .github/workflows/ci.yml
+   touch .github/workflows/build.yml
    ```
 
 2. **Voeg de build workflow content toe**
 
    ```yaml
-   name: CI/CD Pipeline
+   name: Build Phase
    on:
      push:
        branches: [ main ]
@@ -124,7 +127,6 @@ Maak het GitHub Actions workflow bestand om je build te automatiseren:
    - **Upload**: Slaat de gebouwde bestanden op als downloadbare artifacts
 
 ### Stap 2: Test de Build Lokaal
-<div class=\"step-counter\">2</div>
 
 Voordat je naar GitHub pusht, test het build proces lokaal:
 
@@ -158,12 +160,9 @@ ls -la .vitepress/dist/
 # - setup.html, phases/, etc.
 ```
 
-<div class=\"tip-box\">
 💡 <strong>Lokaal Testen Eerst:</strong> Test altijd lokaal voordat je pusht. Dit bespaart tijd en voorkomt onnodige CI runs.
-</div>
 
 ### Stap 3: Commit en Push de Workflow
-<div class=\"step-counter\">3</div>
 
 Nu de workflow klaar is, laten we het in versiebeheer plaatsen:
 
@@ -187,7 +186,6 @@ git push origin feat/add-build-workflow
 ```
 
 ### Stap 4: Creëer Pull Request en Monitor de Build
-<div class=\"step-counter\">4</div>
 
 1. **Ga naar je repository op GitHub**
 2. **Klik op \"Compare & pull request\"**
@@ -200,12 +198,9 @@ git push origin feat/add-build-workflow
    - Klik erop om de live logs te zien
    - Wacht tot alle checks groen zijn ✅
 
-<div class=\"success-box\">
 🎉 <strong>Eerste Geautomatiseerde Build!</strong> Je ziet nu je code automatisch bouwen in de cloud!
-</div>
 
 ### Stap 5: Download en Verifieer het Artifact
-<div class=\"step-counter\">5</div>
 
 Eenmaal de workflow voltooid is:
 
@@ -217,9 +212,7 @@ Eenmaal de workflow voltooid is:
 
 **Jij zou je gebouwde website moeten zien!** Dit is precies wat later gedeployed zal worden.
 
-<div class=\"tip-box\">
 💡 <strong>Artifact Verificatie:</strong> Het downloaden en inspecteren van artifacts helpt je begrijpen wat er precies gedeployed wordt.
-</div>
 
 ## Validatie & Volgende Stappen
 
@@ -251,7 +244,4 @@ Nu je een werkend build proces hebt, is het tijd om **kwaliteitsborging** toe te
 
 [Ga verder naar Fase 3: Test →](/phases/03-test)
 
-<div class=\"workshop-callout\">
-  <div class=\"workshop-callout-title\">💡 Reflectie Moment</div>
-  <p>Denk na over hoe geautomatiseerde builds jouw development workflow verbeteren. Geen meer \"het werkt op mijn machine\" problemen—de build is consistent en betrouwbaar!</p>
-</div>
+Denk na over hoe geautomatiseerde builds jouw development workflow verbeteren. Geen meer "het werkt op mijn machine" problemen—de build is consistent en betrouwbaar!

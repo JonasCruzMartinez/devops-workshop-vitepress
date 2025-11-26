@@ -82,8 +82,11 @@ Voor onze VitePress site gebruiken we Jest om te testen:
 
 ## Hands-On Oefening
 
+<div class="tip-box">
+  📋 <strong>Reference:</strong> Zie <code>.github/workflows/test.yml</code> voor de complete workflow.
+</div>
+
 ### Stap 1: Installeer Jest
-<div class="step-counter">1</div>
 
 Voeg eerst Jest toe als dev dependency aan je project:
 
@@ -92,11 +95,10 @@ Voeg eerst Jest toe als dev dependency aan je project:
 pnpm add -D jest @types/jest
 
 # Creëer de test configuratie
-touch jest.config.js
+code jest.config.js
 ```
 
 ### Stap 2: Configureer Jest
-<div class="step-counter">2</div>
 
 Maak het Jest configuratie bestand `jest.config.js`:
 
@@ -129,7 +131,6 @@ module.exports = {
 - **Test patroon**: Draait alle bestanden eindigend op `.test.js` in tests map
 
 ### Stap 3: Creëer Test Directory en Bestanden
-<div class="step-counter">3</div>
 
 Stel de test structuur in:
 
@@ -142,7 +143,6 @@ touch tests/site.test.js
 ```
 
 ### Stap 4: Schrijf Je Eerste Tests
-<div class="step-counter">4</div>
 
 Maak `tests/site.test.js` met uitgebreide tests voor je workshop site:
 
@@ -248,7 +248,6 @@ describe('Workshop Site Content Validatie', () => {
 - **Coverage bijdrage**: Elke test oefent verschillende delen van de codebase
 
 ### Stap 5: Test Lokaal
-<div class="step-counter">5</div>
 
 Draai je tests lokaal om te verifiëren dat ze werken:
 
@@ -276,54 +275,59 @@ Tests:       6 passed, 6 total
 Coverage:    85.2% Statements | 80.5% Branches | 90.1% Functions | 85.2% Lines
 ```
 
-### Stap 6: Voeg Tests Toe aan CI Pipeline
-<div class="step-counter">6</div>
+### Stap 6: Creëer de Test Workflow
 
-Update `.github/workflows/ci.yml` om tests toe te voegen:
+Maak een nieuw bestand `.github/workflows/test.yml` om je tests te automatiseren:
 
 ```yaml
-# Voeg deze job toe na de build job
-test:
-  needs: build
-  runs-on: ubuntu-latest
-  
-  steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
-      
-    - name: Setup pnpm
-      uses: pnpm/action-setup@v2
-      with:
-        version: 8
+name: Test Phase
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
         
-    - name: Setup Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: 18
-        cache: 'pnpm'
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+          
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: 'pnpm'
+          
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
         
-    - name: Install dependencies
-      run: pnpm install --frozen-lockfile
-      
-    - name: Run tests with coverage
-      run: pnpm test --coverage
-      
-    - name: Upload coverage report
-      uses: actions/upload-artifact@v4
-      with:
-        name: coverage-report
-        path: coverage/
+      - name: Run tests with coverage
+        run: pnpm test --coverage
+        
+      - name: Upload coverage report
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-report
+          path: coverage/
 ```
 
 ### Stap 7: Commit en Push
-<div class="step-counter">7</div>
 
 ```bash
 # Creëer een nieuwe branch
 git checkout -b feat/add-testing
 
 # Voeg alle test bestanden toe
-git add jest.config.js tests/ .github/workflows/ci.yml package.json
+git add jest.config.js tests/ .github/workflows/test.yml package.json
 
 # Commit met een beschrijvend bericht
 git commit -m "feat: voeg geautomatiseerde testing toe
