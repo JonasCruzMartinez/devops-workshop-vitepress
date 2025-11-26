@@ -95,12 +95,12 @@ Voeg eerst Jest toe als dev dependency aan je project:
 pnpm add -D jest @types/jest
 
 # Creëer de test configuratie
-code jest.config.js
+code jest.config.cjs
 ```
 
 ### Stap 2: Configureer Jest
 
-Maak het Jest configuratie bestand `jest.config.js`:
+Maak het Jest configuratie bestand `jest.config.cjs`:
 
 ```javascript
 // jest.config.js
@@ -117,7 +117,7 @@ module.exports = {
       statements: 80     // 80% statement coverage
     }
   },
-  testMatch: ['**/tests/**/*.test.js'],  // Test bestand patroon
+  testMatch: ['**/tests/**/*.test.cjs'],  // Test bestand patroon
   testTimeout: 10000,  // 10 seconde timeout voor tests
   verbose: true  // Toon gedetailleerde test output
 };
@@ -128,7 +128,7 @@ module.exports = {
 - **Coverage collectie**: Houdt bij welke code is getest
 - **Meerdere reporters**: Text voor console, HTML voor browser weergave
 - **Coverage thresholds**: Laat de build falen als coverage onder 80% zakt
-- **Test patroon**: Draait alle bestanden eindigend op `.test.js` in tests map
+- **Test patroon**: Draait alle bestanden eindigend op `.test.cjs` in tests map
 
 ### Stap 3: Creëer Test Directory en Bestanden
 
@@ -139,15 +139,15 @@ Stel de test structuur in:
 mkdir -p tests
 
 # Creëer het hoofd test bestand
-code tests/site.test.js
+code tests/site.test.cjs
 ```
 
 ### Stap 4: Schrijf Je Eerste Tests
 
-Maak `tests/site.test.js` met uitgebreide tests voor je workshop site:
+Maak `tests/site.test.cjs` met uitgebreide tests voor je workshop site:
 
 ```javascript
-// tests/site.test.js
+// tests/site.test.cjs
 const fs = require('fs');
 const path = require('path');
 
@@ -261,7 +261,7 @@ pnpm test --coverage
 
 **Verwachte output:**
 ```
-PASS tests/site.test.js
+PASS tests/site.test.cjs
   Workshop Site Content Validatie
     ✓ Alle fase documentatie pagina's bestaan (45ms)
     ✓ Progress pagina heeft vereiste structuur (12ms)

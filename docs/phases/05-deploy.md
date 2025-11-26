@@ -65,43 +65,61 @@ graph TD
 Maak een nieuw bestand `.github/workflows/deploy.yml`:
 
 ```yaml
-name: Deploy Phase
+name: Deploy VitePress site to Pages
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v4
-        
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v2
         with:
-          version: 8
-          
-      - name: Setup Node.js
+          fetch-depth: 0
+
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 18
           cache: 'pnpm'
-          
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
-        
-      - name: Build site
-        run: pnpm build
-        
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+          cache-dependency-path: package.json
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Install dependencies with pnpm and build
+        run: |
+          pnpm install --frozen-lockfile=false
+          pnpm build
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .vitepress/dist
+          path: .vitepress/dist
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
+    runs-on: ubuntu-latest
+    name: Deploy
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
 ```
 
 **Wat doet deze workflow?**
@@ -111,6 +129,9 @@ jobs:
 - **Deploy**: Pusht gebouwde site naar gh-pages branch
 
 ### Stap 2: Test de Volledige Pipeline
+
+Voordat we de website kunnen zien, moet GitHub Pages eerst zijn geconfigureerd om te deployen via GitHub Actions.
+![GitHubPages](image-1.png)
 
 Laten we je complete CI/CD pipeline testen:
 

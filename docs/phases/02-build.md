@@ -66,6 +66,11 @@ GitHub Actions automatiseert het build proces:
   📋 <strong>Reference:</strong> Zie <code>.github/workflows/build.yml</code> voor de complete workflow.
 </div>
 
+### Stap 0: Enable GitHub actions
+
+Voordat we kunnen beginnen met het maken van workflows, moeten workflows eerst op GitHub ingeschakeld staan.
+![GitHubActions](image.png)
+
 ### Stap 1: Creëer de Build Workflow
 
 Maak het GitHub Actions workflow bestand om je build te automatiseren:
