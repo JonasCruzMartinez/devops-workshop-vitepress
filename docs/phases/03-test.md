@@ -276,7 +276,17 @@ Coverage:    85.2% Statements | 80.5% Branches | 90.1% Functions | 85.2% Lines
 
 ### Stap 6: Creëer de Test Workflow
 
-Maak een nieuw bestand `.github/workflows/test.yml` om je tests te automatiseren:
+Maak het GitHub Actions workflow bestand om je build te automatiseren:
+
+1. **Creëer de workflow directory en bestand**
+
+```bash
+mkdir -p .github/workflows
+code .github/workflows/test.yml
+```
+
+
+2. **Voeg de test workflow content toe**
 
 ```yaml
 name: Test Phase
