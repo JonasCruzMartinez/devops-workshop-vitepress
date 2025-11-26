@@ -319,14 +319,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install
         
-      - name: Run tests with coverage
+      - name: Run tests
         run: pnpm test --coverage
-        
-      - name: Upload coverage report
-        uses: actions/upload-artifact@v4
-        with:
-          name: coverage-report
-          path: coverage/
+
 ```
 
 ### Stap 7: Commit en Push
