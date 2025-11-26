@@ -71,7 +71,16 @@ Versienummers volgen het patroon: `MAJOR.MINOR.PATCH`
 
 ### Stap 1: Creëer de Release Workflow
 
-Maak een nieuw bestand `.github/workflows/release.yml` om release automatisering toe te voegen:
+Maak het GitHub Actions workflow bestand om je build te automatiseren:
+
+1. **Creëer de workflow bestand**
+
+```bash
+code .github/workflows/release.yml
+```
+
+
+2. **Voeg de release workflow content toe**
 
 ```yaml
 name: Release Phase

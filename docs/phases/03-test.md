@@ -278,10 +278,9 @@ Coverage:    85.2% Statements | 80.5% Branches | 90.1% Functions | 85.2% Lines
 
 Maak het GitHub Actions workflow bestand om je build te automatiseren:
 
-1. **Creëer de workflow directory en bestand**
+1. **Creëer de workflow bestand**
 
 ```bash
-mkdir -p .github/workflows
 code .github/workflows/test.yml
 ```
 
@@ -320,7 +319,7 @@ jobs:
         run: pnpm install
         
       - name: Run tests
-        run: pnpm test --coverage
+        run: pnpm test
 
 ```
 
